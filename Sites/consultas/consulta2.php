@@ -5,30 +5,32 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
 
-  #Se obtiene el valor del input del usuario
-  $altura = $_POST["altura"];
-  $altura = intval($altura);
 
   #Se construye la consulta como un string
- 	$query = "SELECT pid, nombre, altura FROM pokemones where altura>=$altura order by altura desc;";
+ 	$query = "SELECT buques.bid, buques.nombre, navieras.nombre AS nombre_naviera, buques.numero_personas, buques.patente, buques.pais, buques.tipo, buques.id_capitan FROM buques FULL OUTER JOIN navieras ON buques.nid = navieras.nid WHERE LOWER(navieras.nombre) LIKE 'francis%';";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
 	$result -> execute();
-	$pokemones = $result -> fetchAll();
+	$navieras = $result -> fetchAll();
   ?>
 
   <table>
     <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Altura</th>
+      <th>bid</th>
+      <th>nombre</th>
+      <th>nombrre naviera</th>
+      <th>numero personas</th>
+      <th>patente</th>
+      <th>pais</th>
+      <th>tipo</th>
+      <th>id capitan</th>
     </tr>
   
       <?php
         // echo $pokemones;
-        foreach ($pokemones as $p) {
-          echo "<tr><td>$p[0]</td><td>$p[1]</td><td>$p[2]</td></tr>";
+        foreach ($navieras as $p) {
+          echo "<tr><td>$p[0]</td><td>$p[1]</td><td>$p[2]</td><td>$p[3]</td><td>$p[4]</td><td>$p[5]</td><td>$p[6]</td><td>$p[7]</td></tr>";
       }
       ?>
       
