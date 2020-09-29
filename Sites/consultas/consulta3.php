@@ -22,7 +22,7 @@
     <tr>
       <th>bid</th>
       <th>nombre</th>
-      <th>nombrre naviera</th>
+      <th>nombre naviera</th>
       <th>numero personas</th>
       <th>patente</th>
       <th>pais</th>
