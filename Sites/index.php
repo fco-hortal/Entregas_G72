@@ -24,7 +24,7 @@
 
   <h3 align="center"> ¿Quieres buscar un Pokemón por su ID?</h3>
 
-  <form align="center" action="consultas/consulta_stats.php" method="post">
+  <form align="center" action="consultas/consulta2.php" method="post">
     Id:
     <input type="text" name="id_elegido">
     <br/><br/>
