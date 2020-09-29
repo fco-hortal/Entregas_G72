@@ -23,7 +23,7 @@
 
 <h3 align="center"> Consulta 1: Muestre el nombre de todas las navieras </h3>
 
-<form align="center" action="consultas/consulta1.php" method="post">
+<form align="center" action="consultas/consulta2.php" method="post">
   <!-- Tipo:
   <input type="text" name="tipo_elegido">
   <br/>
@@ -38,7 +38,7 @@
 
 <h3 align="center"> Consulta 1: Muestre el nombre de todas las navieras </h3>
 
-<form align="center" action="consultas/consulta1.php" method="post">
+<form align="center" action="consultas/consulta3.php" method="post">
   <!-- Tipo:
   <input type="text" name="tipo_elegido">
   <br/>
@@ -53,7 +53,7 @@
 
 <h3 align="center"> Consulta 1: Muestre el nombre de todas las navieras </h3>
 
-<form align="center" action="consultas/consulta1.php" method="post">
+<form align="center" action="consultas/consulta4.php" method="post">
   <!-- Tipo:
   <input type="text" name="tipo_elegido">
   <br/>
@@ -68,7 +68,7 @@
 
 <h3 align="center"> Consulta 1: Muestre el nombre de todas las navieras </h3>
 
-<form align="center" action="consultas/consulta1.php" method="post">
+<form align="center" action="consultas/consulta5.php" method="post">
   <!-- Tipo:
   <input type="text" name="tipo_elegido">
   <br/>
@@ -83,7 +83,7 @@
 
 <h3 align="center"> Consulta 1: Muestre el nombre de todas las navieras </h3>
 
-<form align="center" action="consultas/consulta1.php" method="post">
+<form align="center" action="consultas/consulta6.php" method="post">
   <!-- Tipo:
   <input type="text" name="tipo_elegido">
   <br/>
@@ -95,7 +95,7 @@
 
 <br>
 
-  </form> -->
+
 
   <br>
   <br>
