@@ -57,7 +57,7 @@
   $dataCollected = $result -> fetchAll();
   ?>
 
-  <form align="center" action="consultas/consulta_tipo.php" method="post">
+  <form align="center" action="consultas/consulta1.php" method="post">
     Seleccinar un tipo:
     <select name="tipo">
       <?php
