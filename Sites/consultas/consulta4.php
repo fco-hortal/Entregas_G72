@@ -15,20 +15,25 @@
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
 	$result -> execute();
-	$pokemones = $result -> fetchAll();
+	$navieras = $result -> fetchAll();
   ?>
 
   <table>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Altura</th>
+  <tr>
+      <th>bid</th>
+      <th>nombre</th>
+      <th>nombrre naviera</th>
+      <th>numero personas</th>
+      <th>patente</th>
+      <th>pais</th>
+      <th>tipo</th>
+      <th>id capitan</th>
     </tr>
   
       <?php
         // echo $pokemones;
-        foreach ($pokemones as $p) {
-          echo "<tr><td>$p[0]</td><td>$p[1]</td><td>$p[2]</td></tr>";
+        foreach ($navieras as $p) {
+          echo "<tr><td>$p[0]</td><td>$p[1]</td><td>$p[2]</td><td>$p[3]</td><td>$p[4]</td><td>$p[5]</td><td>$p[6]</td><td>$p[7]</td></tr>";
       }
       ?>
       
