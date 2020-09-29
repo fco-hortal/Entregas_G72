@@ -8,7 +8,7 @@
 
   <h3 align="center"> ¿Quieres buscar un Pokemón por tipo y/o nombre?</h3>
 
-  <form align="center" action="consultas/consulta_tipo_nombre.php" method="post">
+  <form align="center" action="consultas/consulta1.php" method="post">
     Tipo:
     <input type="text" name="tipo_elegido">
     <br/>
