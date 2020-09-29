@@ -82,7 +82,7 @@ buque ‘Magnolia’ </h3>
 <br>
 <br>
 
-<h3 align="center"> Consulta 6: Encuentre el buque pesquero que tiene m´as personas trabajando </h3>
+<h3 align="center"> Consulta 6: Encuentre el buque pesquero que tiene más personas trabajando </h3>
 
 <form align="center" action="consultas/consulta6.php" method="post">
   <!-- Tipo:

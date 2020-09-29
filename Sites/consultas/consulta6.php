@@ -10,7 +10,7 @@
   $altura = intval($altura);
 
   #Se construye la consulta como un string
- 	$query = "SELECT pid, nombre, altura FROM pokemones where altura>=$altura order by altura desc;";
+ 	$query = "SELECT buques.bid, buques.nombre, buques.nid, buques.numero_personas, buques.patente, buques.pais, buques.tipo, buques.id_capitan FROM buques JOIN pesquero ON buques.bid = pesquero.bid WHERE buques.numero_personas = (SELECT MAX(buques.numero_personas) FROM buques);";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
@@ -19,16 +19,22 @@
   ?>
 
   <table>
+  <table>
     <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Altura</th>
+      <th>bid</th>
+      <th>nombre</th>
+      <th>nombrre naviera</th>
+      <th>numero personas</th>
+      <th>patente</th>
+      <th>pais</th>
+      <th>tipo</th>
+      <th>id capitan</th>
     </tr>
   
       <?php
         // echo $pokemones;
-        foreach ($pokemones as $p) {
-          echo "<tr><td>$p[0]</td><td>$p[1]</td><td>$p[2]</td></tr>";
+        foreach ($navieras as $p) {
+          echo "<tr><td>$p[0]</td><td>$p[1]</td><td>$p[2]</td><td>$p[3]</td><td>$p[4]</td><td>$p[5]</td><td>$p[6]</td><td>$p[7]</td></tr>";
       }
       ?>
       
