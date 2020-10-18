@@ -17,19 +17,19 @@
           <a class="nav-link active" href="#">Loguear</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Registrar</a>
+          <a class="nav-link" href="index_register.php">Registrar</a>
         </li>
       </ul>
     </div>
     <div class="card-body">
-      <form action="main.php" method="post">
+      <form action="main/main_miperfil.php" method="post">
         <div class="form-group">
           <label>Usuario</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" name="user">
         </div>
         <div class="form-group">
           <label>Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" class="form-control" id="exampleInputPassword1" name="pass">
         </div>
         <button type="input" class="btn btn-primary">Ingresar</button>
       </form>
