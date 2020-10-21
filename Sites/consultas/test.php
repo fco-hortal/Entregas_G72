@@ -1,3 +1,7 @@
+<?php 
+$var1 = $_POST["name"];   
+?>
+
 <div class="container">
   <div class="row">
     <div class="col-12">
@@ -11,7 +15,8 @@
         </thead>
         <tbody>
           <tr>
-            <td>NAV1</td>
+            <td><?php $var1;?>
+            </td>
             <td>
               <form>
                 <label for="birthday">Birthday:</label>
