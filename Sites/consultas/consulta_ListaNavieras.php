@@ -34,10 +34,10 @@
               echo "<tr>
               <td>$r[0]</td>
               <td>
-                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i></button>
               </td>
               <td>
-                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i></button>
               </td>
               </tr>";
             }
