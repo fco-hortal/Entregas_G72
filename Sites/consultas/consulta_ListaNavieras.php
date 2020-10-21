@@ -33,7 +33,6 @@
               echo "<tr>
               <td>$r[1]</td>
               <td>
-              <td>
                 <form action=\"../consultas/test.php\" method=\"post\">
                   <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
                   <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
