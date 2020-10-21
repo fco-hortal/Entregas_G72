@@ -5,6 +5,7 @@
   #$var1 = $_POST["nombre_var1"];
 
   #Se construye la consulta SQL como un string--------------------------------------------EDITAR-->
+  
   $query = "
   SELECT * FROM puerto;
   ";
@@ -22,7 +23,6 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">Lista Puertos</th>
               <th scope="col">Ver capacidad Instalacion</th>
               <th scope="col">Registrar Permisos</th>
             </tr>
@@ -32,12 +32,11 @@
             #Se itera echo en tabla para mostrar resultados segun las columnas de la tabla ---EDITAR-->
             foreach ($resultados as $r) {
               echo "<tr>
-              <td>$r[1]</td>
               <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i></button>
+                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones del puerto: $r[1]</button>
               </td>
               <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i></button>
+                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Registrar permiso en puerto: $r[1]</button>
               </td>
               </tr>";
             }
