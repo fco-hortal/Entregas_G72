@@ -13,10 +13,16 @@
           <tr>
             <td>NAV1</td>
             <td>
-              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+              <form>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday">
+              </form>
             </td>
             <td>
-              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+              <form>
+                <label for="quantity">Quantity (between 1 and 5):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+              </form>
             </td>
           </tr>
         </tbody>

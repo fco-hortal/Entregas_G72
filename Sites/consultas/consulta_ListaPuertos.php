@@ -24,8 +24,8 @@
           <thead>
             <tr>
               <th scope="col">Puertos</th>
-              <th scope="col-md-auto">Capacidadd de Instalación</th>
-              <th scope="col-md-auto">Registro de Permisos</th>
+              <th scope="col">Capacidadd de Instalación</th>
+              <th scope="col">Registro de Permisos</th>
             </tr>
           </thead>
           <tbody>
@@ -35,10 +35,16 @@
               echo "<tr>
               <td>$r[1]</td>
               <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones</button>
+                <form action=\"../consultas/test.php\" method=\"post\">
+                  <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
+                  <button type=\"input\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones</button>
+                </form>
               </td>
               <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Registrar Permiso</button>
+                <form action=\"../consultas/test.php\" method=\"post\">
+                  <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
+                  <button type=\"input\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones</button>
+                </form>              
               </td>
               </tr>";
             }
@@ -48,3 +54,5 @@
       </div>
     </div>
   </div>
+
+  Registrar Permiso
