@@ -37,7 +37,7 @@
               <td>
                 <form action=\"../consultas/test.php\" method=\"post\">
                   <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
-                  <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[0]\">
+                  <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
                   <button type=\"input\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones</button>
                 </form>
               </td>
@@ -45,7 +45,7 @@
                 <form action=\"../consultas/test.php\" method=\"post\">
                   <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
                   <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
-                  <button type=\"input\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones</button>
+                  <button type=\"input\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Registrar Permiso</button>
                 </form>              
               </td>
               </tr>";
@@ -57,4 +57,4 @@
     </div>
   </div>
 
-  Registrar Permiso
+  
