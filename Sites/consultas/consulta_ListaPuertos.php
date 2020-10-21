@@ -23,8 +23,9 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">Ver capacidad Instalacion</th>
-              <th scope="col">Registrar Permisos</th>
+              <th scope="col">Puertos</th>
+              <th scope="col">Capacidadd de Instalación</th>
+              <th scope="col">Registro de Permisos</th>
             </tr>
           </thead>
           <tbody>
@@ -32,11 +33,12 @@
             #Se itera echo en tabla para mostrar resultados segun las columnas de la tabla ---EDITAR-->
             foreach ($resultados as $r) {
               echo "<tr>
+              <td>$r[1]</td>
               <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones del puerto: $r[1]</button>
+                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones</button>
               </td>
               <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Registrar permiso en puerto: $r[1]</button>
+                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\">Registrar Permiso</i></button>
               </td>
               </tr>";
             }
