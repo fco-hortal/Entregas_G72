@@ -30,12 +30,15 @@
             #Se itera echo en tabla para mostrar resultados segun las columnas de la tabla ---EDITAR-->
             foreach ($resultados as $r) {
               echo "<tr>
-              <td>
-                <form action=\"../consultas/test.php\" method=\"post\">
-                  <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
-                  <input type=\"submit\" name=\"name\" value=\"$r[1]\">
-                </form>
-              </td>
+              <form action=\"../consultas/test.php\" method=\"post\">
+                <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
+                <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
+                <input type=\"submit\" name=\"go\" value=\"
+                <td>
+                $r[1]
+                </td>
+                \">
+              </form>
               </tr>";
             }
             ?>
