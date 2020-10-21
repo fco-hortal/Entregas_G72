@@ -9,14 +9,19 @@ $var2 = $_POST["name"];
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">Lista Navieras</th>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
             <th scope="col">Accion 1</th>
             <th scope="col">Accion 2</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><?php echo $var1;?>
+            <td>
+              <?php echo $var1;?>
+            </td>
+            <td>
+              <?php echo $var2;?>
             </td>
             <td>
               <form>
