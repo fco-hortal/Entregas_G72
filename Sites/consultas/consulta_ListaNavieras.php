@@ -32,7 +32,7 @@
             #Se itera echo en tabla para mostrar resultados segun las columnas de la tabla ---EDITAR-->
             foreach ($resultados as $r) {
               echo "<tr>
-              <td>$r[0]</td>
+              <td>$r[1]</td>
               <td>
                 <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i></button>
               </td>
