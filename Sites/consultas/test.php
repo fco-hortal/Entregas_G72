@@ -1,5 +1,6 @@
 <?php 
-$var1 = $_POST["name"];   
+$var1 = $_POST["id"];   
+$var2 = $_POST["name"];   
 ?>
 
 <div class="container">
