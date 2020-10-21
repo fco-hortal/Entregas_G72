@@ -22,8 +22,7 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">Lista Navieras</th>
-              <th scope="col">Ver Buques</th>
+              <th scope="col">Navieras</th>
             </tr>
           </thead>
           <tbody>
@@ -31,15 +30,10 @@
             #Se itera echo en tabla para mostrar resultados segun las columnas de la tabla ---EDITAR-->
             foreach ($resultados as $r) {
               echo "<tr>
-              <td>$r[1]</td>
               <td>
                 <form action=\"../consultas/test.php\" method=\"post\">
                   <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
-                  <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
-                  <a class=\"btn btn-primary\" data-toggle=\"collapse\" href=\"../consultas/test2.php\" role=\"button\" aria-expanded=\"false\" aria-controls=\"test2\">
-                    COLLAPSE
-                  </a>
-                  <button type=\"input\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver buques de naviera</button>
+                  <input type=\"submit\" name=\"name\" value=\"$r[1]\">
                 </form>
               </td>
               </tr>";
