@@ -1,4 +1,5 @@
 <?php 
+include('../templates/header.html');
 $var1 = $_POST["id"];   
 $var2 = $_POST["name"];   
 ?>
