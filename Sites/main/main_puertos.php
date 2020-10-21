@@ -26,10 +26,10 @@
     <span class="border border-primary">
       <h5 class="card-header">Seleccione un puerto:</h5>
       <div class="card-body">
-        <h5 class="card-title">**LISTA DE PUERTOS**</h5>
+        <?php require('../consultas/test.php');   ?>
         <p class="card-text">Mostrar input de intervalos de fechas y entregar dias en el intervalo donde no esta agotada capacidad y ademas promedio de ocupacion en dicho intervalo</p>
         <p class="card-text">Mostrar input de tipo de instalacion y fechas (segun instalacion) y una patente de barco y entregar instalaciones que tienen capacidad para ese barco en esa fecha en ese puerto --> si existe, crear permiso</p>
-      </div>
+      </div>s
     </span>
   </div>
 

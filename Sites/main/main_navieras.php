@@ -26,7 +26,7 @@
     <span class="border border-primary">
       <h5 class="card-header">Seleccione una naviera:</h5>
       <div class="card-body">
-        <h5 class="card-title">**LISTA DE NAVIERAS**</h5>
+        <?php require('../consultas/consulta_ListaNavieras.php');   ?>
         <p class="card-text">Mostrar buques (nombre, patente) de cada naviera</p>
       </div>
     </span>
