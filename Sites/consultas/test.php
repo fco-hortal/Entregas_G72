@@ -15,7 +15,7 @@ $var1 = $_POST["name"];
         </thead>
         <tbody>
           <tr>
-            <td><?php $var1;?>
+            <td><?php echo $var1;?>
             </td>
             <td>
               <form>
