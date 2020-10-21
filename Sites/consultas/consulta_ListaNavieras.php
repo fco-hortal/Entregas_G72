@@ -23,8 +23,7 @@
           <thead>
             <tr>
               <th scope="col">Lista Navieras</th>
-              <th scope="col">Accion 1</th>
-              <th scope="col">Accion 2</th>
+              <th scope="col">Ver Buques</th>
             </tr>
           </thead>
           <tbody>
@@ -33,9 +32,6 @@
             foreach ($resultados as $r) {
               echo "<tr>
               <td>$r[1]</td>
-              <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i></button>
-              </td>
               <td>
                 <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i></button>
               </td>

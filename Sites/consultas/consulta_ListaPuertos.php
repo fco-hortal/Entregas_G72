@@ -23,8 +23,8 @@
           <thead>
             <tr>
               <th scope="col">Lista Puertos</th>
-              <th scope="col">Accion 1</th>
-              <th scope="col">Accion 2</th>
+              <th scope="col">Ver capacidad Instalacion</th>
+              <th scope="col">Registrar Permisos</th>
             </tr>
           </thead>
           <tbody>
