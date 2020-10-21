@@ -24,11 +24,11 @@
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header">PUERTOS</h5>
+      <h5 class="card-header">Seleccione un puerto:</h5>
       <div class="card-body">
-        <h5 class="card-title">xd</h5>
-        <p class="card-text">lol</p>
-        <a href="#" class="btn btn-primary">Consulta</a>
+        <h5 class="card-title">**LISTA DE PUERTOS**</h5>
+        <p class="card-text">Mostrar input de intervalos de fechas y entregar dias en el intervalo donde no esta agotada capacidad y ademas promedio de ocupacion en dicho intervalo</p>
+        <p class="card-text">Mostrar input de tipo de instalacion y fechas (segun instalacion) y una patente de barco y entregar instalaciones que tienen capacidad para ese barco en esa fecha en ese puerto --> si existe, crear permiso</p>
       </div>
     </span>
   </div>

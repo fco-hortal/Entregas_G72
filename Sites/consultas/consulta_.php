@@ -2,7 +2,7 @@
 
 <body>
 <?php
-  require("../config/conexion1.php");
+  require("../config/conexion2.php");
 
   #En caso de ser necesario se crean variables desde inputs en index ---------------------EDITAR-->
   $var1 = $_POST["nombre_var1"];

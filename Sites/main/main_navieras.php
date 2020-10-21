@@ -24,11 +24,10 @@
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header">NAVIERAS</h5>
+      <h5 class="card-header">Seleccione una naviera:</h5>
       <div class="card-body">
-        <h5 class="card-title">xd</h5>
-        <p class="card-text">lol</p>
-        <a href="#" class="btn btn-primary">Consulta</a>
+        <h5 class="card-title">**LISTA DE NAVIERAS**</h5>
+        <p class="card-text">Mostrar buques (nombre, patente) de cada naviera</p>
       </div>
     </span>
   </div>

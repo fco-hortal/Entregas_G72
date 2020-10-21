@@ -29,23 +29,27 @@
         </div>
         <div class="form-group">
           <label>Edad:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="edad">
+          <input type="text" class="form-control" name="edad">
         </div>
         <div class="form-group">
           <label>Sexo:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="sexo">
+          <input type="text" class="form-control" name="sexo">
         </div>
         <div class="form-group">
           <label>Número de pasaporte:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="n_pas">
+          <input type="text" class="form-control" name="n_pas">
         </div>
         <div class="form-group">
           <label>Nacionalidad:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="nac">
+          <input type="text" class="form-control" name="nac">
         </div>
         <div class="form-group">
             <label>Contraseña:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="pass">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="pass_1">
+        </div>
+        <div class="form-group">
+            <label>Confirme su contraseña:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="pass_2">
         </div>
         <button type="input" class="btn btn-primary">Registrar</button>
       </form>
