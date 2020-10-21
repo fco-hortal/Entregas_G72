@@ -24,8 +24,8 @@
           <thead>
             <tr>
               <th scope="col">Puertos</th>
-              <th scope="col">Capacidadd de Instalación</th>
-              <th scope="col">Registro de Permisos</th>
+              <th scope="col-md-auto">Capacidadd de Instalación</th>
+              <th scope="col-md-auto">Registro de Permisos</th>
             </tr>
           </thead>
           <tbody>
@@ -38,7 +38,7 @@
                 <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver capacidad de instalaciones</button>
               </td>
               <td>
-                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\">Registrar Permiso</i></button>
+                <button type=\"button\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Registrar Permiso</button>
               </td>
               </tr>";
             }
