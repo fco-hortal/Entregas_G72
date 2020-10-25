@@ -4,7 +4,7 @@
 $nombre = $_POST["nombre"];
 $edad = $_POST["edad"];
 $sexo = $_POST["sexo"];
-$n_pass = $_POST["n_pass"];
+$n_pass = $_POST["n_pas"];
 $nac = $_POST["nac"];
 $pass1 = $_POST["pass1"];
 $pass2 = $_POST["pass2"];
