@@ -35,6 +35,7 @@ function uidExist($db, $n_pass) {
     foreach ($resultados as $r) {
         if ($r[3] == $n_pass){
             $state = false;
+            
             return $state;
             exit(); 
         $state = false;
