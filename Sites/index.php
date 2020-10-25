@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="card-body">
-      <form action="main/main_miperfil.php" method="post">
+      <form action="inc/log_in-inc.php" method="post">
         <div class="form-group">
           <label>Usuario</label>
           <input type="text" class="form-control" name="user">
