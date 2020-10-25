@@ -1,6 +1,6 @@
 <?php
 
-function emptyInputSignup($nombre, $edad, $sexo, $n_pass$n_pass, $nac, $pass1, $pass2) {
+function emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) {
 
     $result;
     if (empty($nombre) || empty($edad) || empty($sexo) || empty($n_pass) || empty($nac) || empty($pass1) || empty($pass2) || ){
@@ -48,6 +48,6 @@ function userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1) {
     $sql = 'INSERT INTO usuarios (nombre, edad, sexo, pasaporte, nacionalidad, contraseña) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1);'
     $result = $db -> prepare($sql);
     $result -> execute();
-    
+
     
 }
