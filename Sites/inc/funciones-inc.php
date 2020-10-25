@@ -25,7 +25,7 @@ function pwdMatch($pass1, $pass2) {
 }
 
 function uidExist($db, $n_pass) {
-    $state = true;
+    $state = false;
     $sql = 'SELECT * FROM us;';
     $result = $db -> prepare($sql);
     $result -> execute();
