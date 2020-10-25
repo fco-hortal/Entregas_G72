@@ -32,7 +32,7 @@ $name = $_POST["name"];
     <span class="border border-primary">
       <h5 class="card-header"><?php echo "Mostrando buques de la naviera: $var2";?></h5>
       <div class="card-body">
-        <?php require('../consultas/consulta_BuquesDeNavieras.php');   ?>
+        <?php include('../consultas/consulta_BuquesDeNavieras.php');   ?>
         <p class="card-text">Mostrar buques (nombre, patente) de cada naviera</p>
       </div>
     </span>
