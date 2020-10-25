@@ -41,10 +41,10 @@ function uidExist($db, $n_pass) {
             return $state;
             exit();
         }
-        echo('xd');
+        
         else {
             $state = false;
-            return $state;
+            echo('xd');    
     return $state;
         }
     }
