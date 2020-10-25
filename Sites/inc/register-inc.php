@@ -20,8 +20,9 @@ if (pwdMatch($pass1, $pass2) !== FALSE) {
     header('location: ../index.php?error=match_pwd');
     exit();
 }
-if (uidExist($db, $n_pass) !== false) {
-    header('location: ../index.php?error=uidExist');
+if (uidExist($db, $n_pass) !== FALSE) {
+    #header('location: ../index.php?error=uidExist');
+
     exit();
     }
    
