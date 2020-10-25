@@ -32,7 +32,9 @@ function uidExist($db, $n_pass) {
     $result -> execute();
     $resultados = $result -> fetchAll();
     foreach ($resultados as $r) {
-        echo($r);
+        foreach ($r as $i) {
+            echo($i);
+        }
         if ($r[3] == $n_pass){
             $state = true;
             return $state;
