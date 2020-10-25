@@ -1,4 +1,8 @@
-<?php include('../templates/header.html');   ?>
+<?php 
+include('../templates/header.html');
+$var1 = $_POST["id"];   
+$var2 = $_POST["name"];   
+?>
 
 <body>
   </br>
@@ -24,10 +28,14 @@
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header">Seleccione un puerto:</h5>
+      <h5 class="card-header"><?php echo "Usted seleccionó: $var2";?></h5>
       <div class="card-body">
-        <?php require('../consultas/consulta_ListaPuertos.php');   ?>
+        <div class="form-group">
+          <label>Selecciones un tipo de instalación:</label>
+          <input type="date" id="birthday" class="form-control" name="fecha2">
         </div>
+        <p class="card-text">Mostrar input de tipo de instalacion y fechas (segun instalacion) y una patente de barco y entregar instalaciones que tienen capacidad para ese barco en esa fecha en ese puerto --> si existe, crear permiso</p>
+      </div>
     </span>
   </div>
 
