@@ -31,7 +31,7 @@ function uidExist($db, $n_pass) {
     $result = $db -> prepare($sql);
     $result -> execute();
     $resultados = $result -> fetchAll();
-    echo($state);
+    echo('xd');
     foreach ($resultados as $r) {
         foreach ($r as $i) {
             echo($i);
