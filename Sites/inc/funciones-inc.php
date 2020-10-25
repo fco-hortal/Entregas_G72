@@ -40,6 +40,7 @@ function uidExist($db, $n_pass) {
         else {
             $state = false;
             return $state;
+    return $state;
         }
     }
 
