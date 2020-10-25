@@ -26,15 +26,15 @@ function pwdMatch($pass1, $pass2) {
 }
 
 function uidExist($db, $n_pass) {
-    $state = false;
-    $sql = 'SELECT * FROM us;';
+    $state = TRUE;
+    $sql = 'SELECT * FROM usuarios;';
     $result = $db -> prepare($sql);
     $result -> execute();
     $resultados = $result -> fetchAll();
     
     foreach ($resultados as $r) {
         if ($r[3] == $n_pass){
-            $state = TRUE;
+            $state = FALSE;
 
             return $state;
             exit(); 
@@ -53,4 +53,38 @@ function userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1) {
     $results -> execute();
 
     
+}
+
+function emptyInputSignup1($nombre, $pass) {
+
+    $result;
+    if (empty($nombre) || empty($pass) ){
+        
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
+
+function uidExist1($db, $usuario_login, $contraseña_login) {
+    $state = FALSE;
+    $sql = 'SELECT * FROM usuarios;';
+    $result = $db -> prepare($sql);
+    $result -> execute();
+    $resultados = $result -> fetchAll();
+    
+    foreach ($resultados as $r) {
+        if ($r[3] == $usuario_login || $r[5] == $contraseña_login){
+            $state = TRUE;
+
+            return $state;
+            exit(); 
+        $state = FALSE;
+               
+    return TRUE;
+        }
+    }
+
 }
