@@ -14,16 +14,16 @@ if (isset($_POST["submit"] )) {
 
     if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== FALSE) {
         header('location: ../index.php?error=vacios')
-        exit()
+        exit();
     } 
     if (pwdMatch($pass1, $pass2) !== FALSE) {
         header('location: ../index.php?error=match_pwd')
-        exit()
+        exit();
     }
 
     if (uidExist($db, $n_pass) !== FALSE) {
         header('location: ../index.php')
-        exit()
+        exit();
     }
     
     userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1)
