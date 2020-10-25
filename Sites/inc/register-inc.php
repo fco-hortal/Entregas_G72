@@ -8,13 +8,7 @@ $n_pass = $_POST["n_pas"];
 $nac = $_POST["nac"];
 $pass1 = $_POST["pass_1"];
 $pass2 = $_POST["pass_2"];
-echo($nombre);
-echo($edad);
-echo($sexo);
-echo($n_pass);
-echo($nac);
-echo($pass1);
-echo($pass2);
+
 require '../config/conexion1.php';
 require 'funciones-inc.php';
 
