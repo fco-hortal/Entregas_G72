@@ -21,7 +21,7 @@ if (pwdMatch($pass1, $pass2) !== FALSE) {
     exit();
 }
 if (uidExist($db, $n_pass) !== FALSE) {
-    header('location: ../index.php?error=uidExist');
+    
     exit();
     }
     
