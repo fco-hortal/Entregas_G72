@@ -30,9 +30,9 @@ $name = $_POST["name"];
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Solicitud de permiso de Astillero del puerto: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Solicitud de permiso de Astillero del puerto: $name";?></h5>
       <div class="card-body">
-        <form action="Permisos_Astilleors_Consulta.php" method="post">
+        <form action="Permisos_Astilleros_Consulta.php" method="post">
           <div class="form-group">
             <label>Indique una fecha inicial:</label>
             <input type="date" id="birthday" class="form-control" name="fecha1">

@@ -32,7 +32,7 @@ $patente = $_POST["patente"];
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Capacidad de instalaciones del puerto: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Solicitud de permiso de Muelle del puerto: $name";?></h5>
       <div class="card-body">
         <?php echo "ID: $id NAME: $name FECHA: $fecha PATENTE: $patente ";?>
       </div>
