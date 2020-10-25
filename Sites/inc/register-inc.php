@@ -27,6 +27,7 @@ if (isset($_POST["submit"] )) {
     }
     
     userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
+    header('location: ../main/main_miperfil.php')
 }
 
     

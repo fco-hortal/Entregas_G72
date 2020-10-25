@@ -49,4 +49,5 @@ function userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1) {
     $result = $db -> prepare($sql);
     $result -> execute();
     
+    
 }
