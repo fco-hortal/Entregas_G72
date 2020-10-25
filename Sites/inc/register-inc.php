@@ -12,15 +12,15 @@ $pass2 = $_POST["pass2"];
 require '../config/conexion1.php';
 require 'funciones-inc.php';
 
-if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== false) {
+if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== FALSE) {
     header('location: ../index.php?error=emptyinput');
     exit();    
 } 
-if (pwdMatch($pass1, $pass2) !== false) {
+if (pwdMatch($pass1, $pass2) !== FALSE) {
     header('location: ../index.php?error=match_pwd');
     exit();
 }
-if (uidExist($db, $n_pass) !== false) {
+if (uidExist($db, $n_pass) !== FALSE) {
     header('location: ../index.php');
     exit();
     }
