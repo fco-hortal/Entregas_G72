@@ -42,8 +42,9 @@
                 </form>
               </td>
               <td>
+                
                 <div class=\"dropdown\">
-                  <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                  <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                     Dropdown
                   </button>
                   <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu2\">
@@ -52,6 +53,7 @@
                     <button class=\"dropdown-item\" type=\"button\">Something else here</button>
                   </div>
                 </div>
+
               </td>
               </tr>";
             }
