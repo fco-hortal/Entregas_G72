@@ -28,13 +28,19 @@ $var2 = $_POST["name"];
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Usted seleccionó: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Usted seleccionó: Solicitar permiso de Muelle del puerto: $var2";?></h5>
       <div class="card-body">
-        <div class="form-group">
-          <label>Selecciones un tipo de instalación:</label>
-          <input type="date" id="birthday" class="form-control" name="fecha2">
-        </div>
-        <p class="card-text">Mostrar input de tipo de instalacion y fechas (segun instalacion) y una patente de barco y entregar instalaciones que tienen capacidad para ese barco en esa fecha en ese puerto --> si existe, crear permiso</p>
+        <form action="main/main_miperfil.php" method="post">
+          <div class="form-group">
+            <label>Indique una fecha :</label>
+            <input type="date" id="birthday" class="form-control" name="fecha">
+          </div>
+          <div class="form-group">
+            <label>Indique la patente del buque que solicita el permiso:</label>
+            <input type="text" id="birthday" class="form-control" name="patente">
+          </div>
+          <button type="input" class="btn btn-primary">Solicitar Permiso</button>
+        </form>
       </div>
     </span>
   </div>
