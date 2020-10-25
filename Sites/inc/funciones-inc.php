@@ -4,7 +4,7 @@ function emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) 
 
     $result;
     if (empty($nombre) || empty($edad) || empty($sexo) || empty($n_pass) || empty($nac) || empty($pass1) || empty($pass2) ){
-        echo($nombre);
+        
         $result = true;
     }
     else {
