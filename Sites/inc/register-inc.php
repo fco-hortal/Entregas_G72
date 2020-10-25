@@ -13,16 +13,16 @@ if (isset($_POST["submit"] )) {
     require 'funciones-inc.php';
 
     if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== FALSE) {
-        header('location: ../index.php?error=vacios')
-        
+        header('location: ../index.php?error=vacios');
+        exit();    
     } 
     if (pwdMatch($pass1, $pass2) !== FALSE) {
-        header('location: ../index.php?error=match_pwd')
+        header('location: ../index.php?error=match_pwd');
         exit();
     }
 
     if (uidExist($db, $n_pass) !== FALSE) {
-        header('location: ../index.php')
+        header('location: ../index.php');
         exit();
     }
     
