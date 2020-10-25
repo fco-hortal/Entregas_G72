@@ -1,4 +1,10 @@
-<?php include('../templates/header.html');   ?>
+<?php 
+include('../templates/header.html');
+$id = $_POST["id"];
+$name = $_POST["name"];
+$fecha1 = $_POST["fecha1"];
+$fecha2 = $_POST["fecha2"];
+?>
 
 <body>
   </br>
@@ -26,10 +32,10 @@
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header">Seleccione un puerto:</h5>
+      <h5 class="card-header"><?php echo "Capacidad de instalaciones del puerto: $name";?></h5>
       <div class="card-body">
-        <?php require('../consultas/consulta_ListaPuertos.php');   ?>
-        </div>
+        <?php echo "ID: $id NAME: $name FECHA1: $fecha1 FECHA2: $fecha2 ";?>
+      </div>
     </span>
   </div>
 

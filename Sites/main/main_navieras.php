@@ -22,12 +22,13 @@
     </div>
   </nav>
 
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
       <h5 class="card-header">Seleccione una naviera:</h5>
       <div class="card-body">
         <?php require('../consultas/consulta_ListaNavieras.php');   ?>
-        <p class="card-text">Mostrar buques (nombre, patente) de cada naviera</p>
       </div>
     </span>
   </div>

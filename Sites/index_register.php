@@ -24,12 +24,15 @@
     <div class="card-body">
       <form action="inc/register-inc.php" method="post">
         <div class="form-group">
-            <label>Para registrar un nuevo usuario, por favor complete con la siguiente información:<br>Nombre:</label>
+            <label>Para registrar un nuevo usuario, por favor complete con la siguiente información:</label>
+        </div>
+        <div class="form-group">
+            <label>Nombre:</label>
             <input type="text" class="form-control" name="nombre">
         </div>
         <div class="form-group">
           <label>Edad:</label>
-          <input type="text" class="form-control" name="edad">
+          <input type="number" class="form-control" id="quantity" name="edad" min="1" max="99">
         </div>
         <div class="form-group">
           <label>Sexo:</label>
