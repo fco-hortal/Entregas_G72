@@ -8,7 +8,7 @@ $n_pass = $_POST["n_pas"];
 $nac = $_POST["nac"];
 $pass1 = $_POST["pass1"];
 $pass2 = $_POST["pass2"];
-
+echo($pass1 $pass2)
 require '../config/conexion1.php';
 require 'funciones-inc.php';
 
@@ -21,7 +21,7 @@ if (pwdMatch($pass1, $pass2) !== FALSE) {
     exit();
 }
 if (uidExist($db, $n_pass) !== FALSE) {
-    header('location: ../index.php?error=uidExistnot');
+    header('location: ../index.php?error=uidExist');
     exit();
     }
     
