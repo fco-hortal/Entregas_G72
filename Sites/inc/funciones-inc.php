@@ -26,19 +26,19 @@ function pwdMatch($pass1, $pass2) {
 }
 
 function uidExist($db, $n_pass) {
-    $state = true;
+    $state = false;
     $sql = 'SELECT * FROM us;';
     $result = $db -> prepare($sql);
     $result -> execute();
     $resultados = $result -> fetchAll();
     foreach ($resultados as $r) {
         if ($r[3] == $n_pass){
-            $state = false;
+            $state = true;
             return $state;
             exit();
         }
         else {
-            $state = true;
+            $state = false;
             return $state;
         }
     }
