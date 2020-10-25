@@ -13,7 +13,7 @@
     
     if (uidExist1($db, $usuario_login, $contraseña_login) == FALSE) {
         header('location: ../index.php?error=badCred');
-        exit()
+        exit();
     }
     if (uidExist1($db, $usuario_login, $contraseña_login) == TRUE) {
         $_SESSION['pasaporte'] = $usuario_login
