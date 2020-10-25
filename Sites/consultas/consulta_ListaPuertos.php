@@ -42,9 +42,12 @@
                 </form>
               </td>
               <td>
-                <div class=\"btn-group\">
-                  <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><i class=\"far fa-eye\"></i>Registrar permiso para</button>
-                  <div class=\"dropdown-menu\">
+                <div class=\"dropdown\">
+                  <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><i class=\"far fa-eye\"></i>
+                  Registrar permiso para
+                  </button>
+
+                  <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu2\">
 
                     <form action=\"../main/main_PuertosPermisosAstilleros.php\" method=\"post\">
                       <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
