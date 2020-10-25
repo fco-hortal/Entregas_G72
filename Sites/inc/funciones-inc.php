@@ -44,7 +44,7 @@ function uidExist($db, $n_pass) {
         
         else {
             $state = false;
-            echo('xd');    
+               
     return $state;
         }
     }
