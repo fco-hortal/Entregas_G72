@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="card-body">
-      <form action="main/main_miperfil.php" method="post">
+      <form action="inc/register-inc.php" method="post">
         <div class="form-group">
             <label>Para registrar un nuevo usuario, por favor complete con la siguiente información:<br>Nombre:</label>
             <input type="text" class="form-control" name="nombre">
