@@ -14,7 +14,7 @@ if (isset($_POST["submit"] )) {
 
     if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== FALSE) {
         header('location: ../index.php?error=vacios')
-        exit();
+        
     } 
     if (pwdMatch($pass1, $pass2) !== FALSE) {
         header('location: ../index.php?error=match_pwd')
