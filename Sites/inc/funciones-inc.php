@@ -15,7 +15,7 @@ function emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) 
 function pwdMatch($pass1, $pass2) {
 
     $result;
-    if ($pass1 !== $pass2)) {
+    if ($pass1 !== $pass2) {
         $result= true;
     }
     else{
