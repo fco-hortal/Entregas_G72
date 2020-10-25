@@ -26,9 +26,11 @@ $var2 = $_POST["name"];
     </div>
   </nav>
 
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Usted seleccionó: Solicitar permiso de Muelle del puerto: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Solicitud de permiso de Muelle del puerto: $var2";?></h5>
       <div class="card-body">
         <form action="main/main_miperfil.php" method="post">
           <div class="form-group">

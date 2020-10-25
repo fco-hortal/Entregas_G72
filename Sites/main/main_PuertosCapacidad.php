@@ -26,19 +26,23 @@ $var2 = $_POST["name"];
     </div>
   </nav>
 
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Usted seleccionó: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Capacidad de instalaciones del puerto: $var2";?></h5>
       <div class="card-body">
-        <div class="form-group">
-          <label>Selecciones una fecha de inicio:</label>
-          <input type="date" id="birthday" class="form-control" name="fecha1">
-        </div>
-        <div class="form-group">
-          <label>Selecciones una fecha de término:</label>
-          <input type="date" id="birthday" class="form-control" name="fecha2">
-        </div>
-      <p class="card-text">Mostrar input de intervalos de fechas y entregar dias en el intervalo donde no esta agotada capacidad y ademas promedio de ocupacion en dicho intervalo</p>
+        <form action="main/main_miperfil.php" method="post">
+          <div class="form-group">
+            <label>Selecciones una fecha de inicio:</label>
+            <input type="date" id="birthday" class="form-control" name="fecha1">
+          </div>
+          <div class="form-group">
+            <label>Selecciones una fecha de término:</label>
+            <input type="date" id="birthday" class="form-control" name="fecha2">
+          </div>
+          <button type="input" class="btn btn-primary">Ver ocupación de instalaciones</button>
+        </form>
       </div>
     </span>
   </div>
