@@ -17,12 +17,7 @@
     }
     if (uidExist1($db, $usuario_login, $contraseña_login) == TRUE) {
         $_SESSION['pasaporte'] = $usuario_login
-        
-
-
-
         header('location: ../main/main_miperfil.php');
-        exit()
     }
     
 
