@@ -1,5 +1,5 @@
 <?php
-  require("../config/conexion2.php");
+  require("../config/conexion1.php");
 
   #En caso de ser necesario se crean variables desde inputs en index ---------------------EDITAR-->
   #$id = $_POST["nombre_var1"];
