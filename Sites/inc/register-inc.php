@@ -24,9 +24,9 @@ if (uidExist($db, $n_pass) !== false) {
     header('location: ../index.php?error=uidExist');
     exit();
     }
-echo('xd');    
+   
 userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
-echo('xd');
+
 header('location: ../main/main_miperfil.php');
 
 

@@ -34,16 +34,16 @@ function uidExist($db, $n_pass) {
     echo('xd');
     foreach ($resultados as $r) {
         foreach ($r as $i) {
-            echo($i);
+            if ($r[3] == $n_pass){
+                $state = true;
+                return $state;
+                exit();
+            }
+            
+            else {
+                $state = false;
+
         }
-        if ($r[3] == $n_pass){
-            $state = true;
-            return $state;
-            exit();
-        }
-        
-        else {
-            $state = false;
                
     return $state;
         }
