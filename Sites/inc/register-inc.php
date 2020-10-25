@@ -26,7 +26,7 @@ if (isset($_POST["submit"] )) {
         exit();
     }
     
-    userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1)
+    userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
 }
 
     
