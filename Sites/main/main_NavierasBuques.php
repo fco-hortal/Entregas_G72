@@ -30,7 +30,7 @@ $name = $_POST["name"];
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Mostrando buques de la naviera: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Mostrando buques de la naviera: $name";?></h5>
       <div class="card-body">
         <?php 
         include('../consultas/consulta_BuquesDeNavieras.php');   

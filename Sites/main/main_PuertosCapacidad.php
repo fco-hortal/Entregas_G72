@@ -1,7 +1,7 @@
 <?php 
 include('../templates/header.html');
-$var1 = $_POST["id"];   
-$var2 = $_POST["name"];   
+$id = $_POST["id"];
+$name = $_POST["name"];
 ?>
 
 <body>
@@ -32,7 +32,7 @@ $var2 = $_POST["name"];
     <span class="border border-primary">
       <h5 class="card-header"><?php echo "Capacidad de instalaciones del puerto: $var2";?></h5>
       <div class="card-body">
-        <form action="main/main_miperfil.php" method="post">
+        <form action="Capacidad_Consulta.php" method="post">
           <div class="form-group">
             <label>Selecciones una fecha de inicio:</label>
             <input type="date" id="birthday" class="form-control" name="fecha1">
@@ -41,6 +41,8 @@ $var2 = $_POST["name"];
             <label>Selecciones una fecha de término:</label>
             <input type="date" id="birthday" class="form-control" name="fecha2">
           </div>
+          <input type="hidden" class="form-control" name="id" value="$id">
+          <input type="hidden" class="form-control" name="name" value="$name">
           <button type="input" class="btn btn-primary">Ver ocupación de instalaciones</button>
         </form>
       </div>

@@ -2,6 +2,9 @@
 include('../templates/header.html');
 $id = $_POST["id"];
 $name = $_POST["name"];
+$fecha1 = $_POST["fecha1"];
+$fecha2 = $_POST["fecha2"];
+$patente = $_POST["patente"];
 ?>
 
 <body>
@@ -30,21 +33,9 @@ $name = $_POST["name"];
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Solicitud de permiso de Muelle del puerto: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Capacidad de instalaciones del puerto: $var2";?></h5>
       <div class="card-body">
-        <form action="Permisos_Muelles_Consulta.php" method="post">
-          <div class="form-group">
-            <label>Indique una fecha :</label>
-            <input type="date" id="birthday" class="form-control" name="fecha">
-          </div>
-          <div class="form-group">
-            <label>Indique la patente del buque que solicita el permiso:</label>
-            <input type="text" id="birthday" class="form-control" name="patente">
-          </div>
-          <input type="hidden" class="form-control" name="id" value="$id">
-          <input type="hidden" class="form-control" name="name" value="$name">
-          <button type="input" class="btn btn-primary">Solicitar Permiso</button>
-        </form>
+        <?php echo "ID: $id NAME: $name FECHA1: $fecha1 FECHA2: $fecha2 PATENTE: $patente";?>
       </div>
     </span>
   </div>
