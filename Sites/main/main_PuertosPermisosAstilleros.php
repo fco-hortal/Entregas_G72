@@ -45,8 +45,8 @@ $name = $_POST["name"];
             <label>Indique la patente del buque que solicita el permiso:</label>
             <input type="text" id="birthday" class="form-control" name="patente">
           </div>
-          <input type="hidden" class="form-control" name="id" value="$id">
-          <input type="hidden" class="form-control" name="name" value="$name">
+          <input type="hidden" class="form-control" name="id" value=<?php echo "$id"; ?>>
+          <input type="hidden" class="form-control" name="name" value=<?php echo "$name"; ?>>
           <button type="input" class="btn btn-primary">Solicitar Permiso</button>
         </form>
       </div>

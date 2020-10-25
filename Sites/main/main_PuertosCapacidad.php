@@ -41,8 +41,8 @@ $name = $_POST["name"];
             <label>Selecciones una fecha de término:</label>
             <input type="date" id="birthday" class="form-control" name="fecha2">
           </div>
-          <input type="hidden" class="form-control" name="id" value="$id">
-          <input type="hidden" class="form-control" name="name" value="$name">
+          <input type="hidden" class="form-control" name="id" value=<?php echo "$id"; ?>>
+          <input type="hidden" class="form-control" name="name" value=<?php echo "$name"; ?>>
           <button type="input" class="btn btn-primary">Ver ocupación de instalaciones</button>
         </form>
       </div>
