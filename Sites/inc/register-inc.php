@@ -21,11 +21,11 @@ if (pwdMatch($pass1, $pass2) !== FALSE) {
     exit();
 }
 if (uidExist($db, $n_pass) !== FALSE) {
-    #header('location: ../index.php?error=uidExist');
+    header('location: ../index.php?error=uidExist');
 
     exit();
     }
-   
+echo('xd');  
 userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
 
 header('location: ../main/main_miperfil.php');
