@@ -30,7 +30,7 @@ $name = $_POST["name"];
 
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header"><?php echo "Capacidad de instalaciones del puerto: $var2";?></h5>
+      <h5 class="card-header"><?php echo "Capacidad de instalaciones del puerto: $name";?></h5>
       <div class="card-body">
         <form action="Capacidad_Consulta.php" method="post">
           <div class="form-group">
