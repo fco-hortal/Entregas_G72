@@ -25,9 +25,7 @@ if (uidExist($db, $n_pass) == TRUE) {
 
     exit();
     }
-echo('xd');  
 userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
-
 header('location: ../main/main_miperfil.php');
 
 
