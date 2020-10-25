@@ -46,8 +46,8 @@ function uidExist($db, $n_pass) {
 
 function userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1) {
     $sql = 'INSERT INTO usuarios (nombre, edad, sexo, pasaporte, nacionalidad, contraseña) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1);'
-    $result = $db -> prepare($sql);
-    $result -> execute();
+    $results = $db -> prepare($sql);
+    $results -> execute();
 
     
 }
