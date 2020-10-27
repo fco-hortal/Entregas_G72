@@ -15,17 +15,18 @@ require 'funciones-inc.php';
 if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== FALSE) {
     header('location: ../index_register.php?error=emptyinput');
     exit();    
-} 
-if (pwdMatch($pass1, $pass2) !== FALSE) {
+}else if (pwdMatch($pass1, $pass2) !== FALSE) {
     header('location: ../index_register.php?error=match_pwd');
     exit();
-}
-if (uidExist($db, $n_pass) == TRUE) {
+}else if (uidExist($db, $n_pass) == TRUE) {
     header('location: ../index_register.php?error=uidExist');
-
     exit();
-    }
-userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
+}else {
+    $id = 1
+    $sql = 'INSERT INTO usuarios (nombre, edad, sexo, pasaporte, nacionalidad, contraseña, id) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1, $id);';
+    $results = $db -> prepare($sql);    
+    $results -> execute();
+}
 session_start();
 $_SESSION['pasaporte'] = $usuario_login;
 header('location: ../main/main_miperfil.php');
