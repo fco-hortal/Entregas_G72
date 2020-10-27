@@ -26,14 +26,6 @@
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
-<body>
-  </br>
-
-    <div class="card-body">
-
-    </div>
-  </div>
-</div>
 <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
       <h5 class="card-header">Buscador de personal</h5>
