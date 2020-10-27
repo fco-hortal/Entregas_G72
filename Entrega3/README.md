@@ -12,7 +12,7 @@ La entrega no esta terminada, pero es posible navegar perfectamente por la web e
 	* Importación de usuarios no implementado.
 	* Información personal en Mi Perfil no implementado.
 	* Información específica para capitanes y jefes de instalaciones no implementado.
-	* Cambio de contraseña implementado
+	* Cambio de contraseña implementado y funcional.
 * 3.2: Navegación
 	* Listado de navieras implementado
 		* Consulta de buques por naviera implementado
@@ -23,7 +23,7 @@ La entrega no esta terminada, pero es posible navegar perfectamente por la web e
 	* No implementado
 * 3.4: Creatividad
 	* Se creó un buscador el cual pide un RUT del personal y entrega datos de esta persona. El RUT debe escribirse de forma correcta, ya que es un Id único.
- ```servidor```
+
 
 ## Ejecución
 
