@@ -40,7 +40,7 @@
       <div class="card-body">
         <form action="../consultas/consulta_buscador_rut.php" method="post">
           <div class="form-group">
-            <label>Rut o Pasaporte:</label>
+            <label>Ingrese RUT:</label>
             <input type="text" class="form-control" name="id">
           </div>
           <button type="input" class="btn btn-primary">Buscar</button>
