@@ -29,10 +29,6 @@ userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
 session_start();
 $_SESSION['pasaporte'] = $usuario_login;
 header('location: ../main/main_miperfil.php');
-/*session_start();
-$_SESSION['pasaporte'] = $usuario_login;
-header('location: ../main/main_miperfil.php');*/
 
-
-    
+ 
 ?>
