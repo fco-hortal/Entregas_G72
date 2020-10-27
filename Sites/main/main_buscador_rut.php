@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link active" href="main_miperfil.php">Mi Perfil</a>
+        <a class="nav-link" href="main_miperfil.php">Mi Perfil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="main_navieras.php">Navieras</a>
@@ -19,7 +19,7 @@
         <a class="nav-link" href="main_puertos.php">Puertos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="main_buscador_rut.php">Buscador</a>
+        <a class="nav-link active" href="main_buscador_rut.php">Buscador</a>
       </li>
     </div>
   </nav>
@@ -36,11 +36,11 @@
 </div>
 <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
-      <h5 class="card-header">Seleccione una naviera:</h5>
+      <h5 class="card-header">Buscador de personal</h5>
       <div class="card-body">
         <form action="inc/log_in-inc.php" method="post">
           <div class="form-group">
-            <label>Rut o Pasaporte</label>
+            <label>Rut o Pasaporte:</label>
             <input type="text" class="form-control" name="user">
           </div>
           <button type="input" class="btn btn-primary">Buscar</button>
