@@ -30,20 +30,25 @@
   </br>
 
     <div class="card-body">
-      <form action="inc/log_in-inc.php" method="post">
-        <div class="form-group">
-          <label>Usuario</label>
-          <input type="text" class="form-control" name="user">
-        </div>
-        <div class="form-group">
-          <label>Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="pass">
-        </div>
-        <button type="input" class="btn btn-primary">Ingresar</button>
-      </form>
+
     </div>
   </div>
 </div>
+<div class="card pl-3 pr-3 pt-4 pb-3"s>
+    <span class="border border-primary">
+      <h5 class="card-header">Seleccione una naviera:</h5>
+      <div class="card-body">
+        <form action="inc/log_in-inc.php" method="post">
+          <div class="form-group">
+            <label>Rut o Pasaporte</label>
+            <input type="text" class="form-control" name="user">
+          </div>
+          <button type="input" class="btn btn-primary">Buscar</button>
+        </form>
+
+      </div>
+    </span>
+  </div>
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
 <br>
