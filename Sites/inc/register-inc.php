@@ -11,7 +11,7 @@ $pass2 = $_POST["pass_2"];
 
 require '../config/conexion1.php';
 require 'funciones-inc.php';
-session_start();
+
 
 if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== FALSE) {
     header('location: ../index_register.php?error=emptyinput');
