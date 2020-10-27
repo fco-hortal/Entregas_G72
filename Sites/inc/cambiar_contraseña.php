@@ -19,7 +19,7 @@ if ($pass_new1 != $pass_new2) {
     exit();
 }
 
-$sql1 = 'UPDATE usuarios SET contraseña = '$pass_new2' WHERE pasaporte = '$pasaporte' AND contraseña = '$pass_act';';
+$sql1 = 'UPDATE usuarios SET contraseña = $pass_new2 WHERE pasaporte = $pasaporte AND contraseña = $pass_act;';
 $sql2 = 'UPDATE usuarios SET contraseña = '$pass_new2' AND WHERE pasaporte = '$pasaporte' AND contraseña = '$pass_act'; ';
 $result = $db -> prepare($sql2);
 #$result -> execute();
