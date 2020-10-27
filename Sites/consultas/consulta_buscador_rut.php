@@ -40,4 +40,12 @@
 
   </table>
 
-<?php include('../templates/footer.html'); ?>
+
+<br>
+<br>
+<form action="../main/main_buscador_rut" method="get">
+    <button type="submit" class="btn btn-primary btn-lg">Volver</button>
+</form>
+</body>
+
+</html>
