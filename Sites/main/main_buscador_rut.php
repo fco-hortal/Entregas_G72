@@ -26,14 +26,29 @@
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
-  <div class="card pl-3 pr-3 pt-4 pb-3"s>
-    <span class="border border-primary">
-      <h5 class="card-header">Ingrese un RUT o pasaporte:</h5>
-      <div class="card-body">
-        <?php require('../consultas/consulta_ListaNavieras.php');   ?>
-      </div>
-    </span>
+<body>
+  </br>
+
+    <div class="card-body">
+      <form action="inc/log_in-inc.php" method="post">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" class="form-control" name="user">
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="pass">
+        </div>
+        <button type="input" class="btn btn-primary">Ingresar</button>
+      </form>
+    </div>
   </div>
+</div>
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+<br>
+
+</body>
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
   <br>
