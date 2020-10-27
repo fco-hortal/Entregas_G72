@@ -23,7 +23,7 @@ if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== F
     exit();
 }else {
     $id = 1
-    $sql = 'INSERT INTO usuarios (nombre, edad, sexo, pasaporte, nacionalidad, contraseña, id) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1, $id)';
+    $sql = 'INSERT INTO usuarios (nombre, edad, sexo, pasaporte, nacionalidad, contraseña, id) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1, $id);';
     $results = $db -> prepare($sql);    
     $results -> execute();
     echo 'Registro insertado'
