@@ -38,10 +38,10 @@
     <span class="border border-primary">
       <h5 class="card-header">Buscador de personal</h5>
       <div class="card-body">
-        <form action="inc/log_in-inc.php" method="post">
+        <form action="consultas/consulta_buscador_rut.php" method="post">
           <div class="form-group">
             <label>Rut o Pasaporte:</label>
-            <input type="text" class="form-control" name="user">
+            <input type="text" class="form-control" name="id">
           </div>
           <button type="input" class="btn btn-primary">Buscar</button>
         </form>
