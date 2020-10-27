@@ -27,7 +27,7 @@ if (uidExist($db, $n_pass) == TRUE) {
     exit();
     }
 
-$sql = "INSERT INTO usuarios(nombre, edad, sexo, pasaporte, nacionalidad, contraseña, id) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1, '1')";
+$sql = "INSERT INTO usuarios(nombre, edad, sexo, pasaporte, nacionalidad, contraseña, id) VALUES ('$nombre', '$edad', '$sexo','$n_pass', '$nac', '$pass1', '1')";
 $results = $db->prepare($sql);    
 $results->execute();
 
