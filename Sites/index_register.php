@@ -36,7 +36,11 @@
         </div>
         <div class="form-group">
           <label>Sexo:</label>
-          <input type="text" class="form-control" name="sexo">
+          //<input type="text" class="form-control" name="sexo">
+          <select name="sexo">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+          </select>
         </div>
         <div class="form-group">
           <label>Número de pasaporte:</label>
