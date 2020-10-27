@@ -30,10 +30,7 @@
       <th>Edad</th>
       <th>Sexo</th>
     </tr>
-      <div class="card pl-3 pr-3 pt-4 pb-3"s>
-      <span class="border border-primary">
-        <h5 class="card-header">Buscador de personal</h5>
-        <div class="card-body">
+
       <?php
         #Se itera echo en tabla para mostrar resultados segun las columnas de la tabla ---EDITAR-->
         foreach ($resultados as $r) {
