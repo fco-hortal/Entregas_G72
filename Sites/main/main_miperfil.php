@@ -26,7 +26,7 @@
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 <?php
-    $usuario_login = $_POST['user'];
+    $usuario_login = $_SESSION['pasaporte'];
     $contraseña_login = $_POST['pass'];
 
 
@@ -37,7 +37,7 @@
       <h5 class="card-header">Información personal:</h5>
       <div class="card-body">
         <h5 class="card-title">Nombre:</h5>
-        <p class="card-text"><?php echo('1') ?></p>
+        <p class="card-text"><?php echo($usuario_login) ?></p>
         <h5 class="card-title">Edad:</h5>
         <p class="card-text">XXXXXXXXXXX</p>
         <h5 class="card-title">Sexo:</h5>
