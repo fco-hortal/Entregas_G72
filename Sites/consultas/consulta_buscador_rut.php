@@ -9,7 +9,7 @@
 
   #Se construye la consulta SQL como un string--------------------------------------------EDITAR-->
   $query = "
-  SELECT XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;
+  SELECT tnombre, edad, sexo FROM trabajador WHERE rut = '$id';
   ";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
@@ -22,8 +22,9 @@
   <table>
     <tr>
       <!-- Se crea columnas de tabla -----------------------------------------------------EDITAR-->
-      <th>TITULO COLUMNA 1</th>
-      <th>TITULO COLUMNA 2</th>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Sexo</th>
     </tr>
 
       <?php
@@ -32,6 +33,7 @@
           echo "<tr>
           <td>$r[0]</td>
           <td>$r[1]</td>
+          <td>$r[2]</td>
           </tr>";
       }
       ?>
