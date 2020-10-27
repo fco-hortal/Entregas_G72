@@ -26,7 +26,7 @@
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
-<div class="card pl-3 pr-3 pt-4 pb-3"s>
+  <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
       <h5 class="card-header">Buscador de personal</h5>
       <div class="card-body">
