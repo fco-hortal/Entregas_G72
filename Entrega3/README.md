@@ -12,7 +12,7 @@ La entrega no esta terminada, pero es posible navegar perfectamente por la web e
 	* Importación de usuarios no implementado.
 	* Información personal en Mi Perfil no implementado.
 	* Información específica para capitanes y jefes de instalaciones no implementado.
-	* Cambio de contraseña no implementado
+	* Cambio de contraseña implementado
 * 3.2: Navegación
 	* Listado de navieras implementado
 		* Consulta de buques por naviera implementado
