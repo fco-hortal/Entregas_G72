@@ -26,10 +26,11 @@ if (emptyInputSignup($nombre, $edad, $sexo, $n_pass, $nac, $pass1, $pass2) !== F
     $sql = 'INSERT INTO usuarios (nombre, edad, sexo, pasaporte, nacionalidad, contraseña, id) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1, $id)';
     $results = $db -> prepare($sql);    
     $results -> execute();
+    echo 'Registro insertado'
 }
-session_start();
+/*session_start();
 $_SESSION['pasaporte'] = $usuario_login;
-header('location: ../main/main_miperfil.php');
+header('location: ../main/main_miperfil.php');*/
 
 
     
