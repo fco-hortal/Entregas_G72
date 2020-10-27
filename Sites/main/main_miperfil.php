@@ -30,14 +30,14 @@ include('../templates/header.html');   ?>
     $usuario_login = $_SESSION['pasaporte'];
     $contraseña_login = $_POST['pass'];
     require "../config/conexion1.php";
-    $sql = 'SELECT * FROM usuarios WHERE usuarios.pasaporte = '$usuario_login';';
+    $sql = 'SELECT * FROM usuarios WHERE usuarios.pasaporte = $usuario_login;';
     $result = $db -> prepare($sql);
     $result -> execute();
     $resultados = $result -> fetchAll();
-    $nombre1 = $resultados[0]
-    $edad1 = $resultados[1]
-    $sexo1 = $resultados[2]
-    $nacionalidad1 = $resultados[4]
+    $nombre1 = $resultados[0];
+    $edad1 = $resultados[1];
+    $sexo1 = $resultados[2];
+    $nacionalidad1 = $resultados[4];
     ?>
   <div class="card pl-3 pr-3 pt-4 pb-3">
     <span class="border border-primary">
