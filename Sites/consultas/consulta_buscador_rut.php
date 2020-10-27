@@ -9,7 +9,7 @@
 
   #Se construye la consulta SQL como un string--------------------------------------------EDITAR-->
   $query = "
-  SELECT tnombre, edad, sexo FROM trabajador WHERE rut = '$id';
+  SELECT tnombre, edad, sexo FROM trabajador WHERE rut LIKE '$id';
   ";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
