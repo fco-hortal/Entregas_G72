@@ -32,10 +32,10 @@ $results->execute();
 
 echo "Tratando de crear el usuario";
 //userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
-//session_start();
+session_start();
 $_SESSION['pasaporte'] = $usuario_login;
 //header('location: ../main/main_miperfil.php');
 
-echo $_SESSION->$nombre
+echo $_SESSION['pasaporte']
  
 ?>
