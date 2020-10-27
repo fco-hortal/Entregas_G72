@@ -19,6 +19,9 @@
       <li class="nav-item">
         <a class="nav-link" href="main_puertos.php">Puertos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main_buscador_rut.php">Buscador</a>
+      </li>
     </div>
   </nav>
 

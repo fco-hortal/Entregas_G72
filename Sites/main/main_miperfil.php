@@ -18,11 +18,14 @@
       <li class="nav-item">
         <a class="nav-link" href="main_puertos.php">Puertos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main_buscador_rut.php">Buscador</a>
+      </li>
     </div>
   </nav>
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
-  
+
   <div class="card pl-3 pr-3 pt-4 pb-3">
     <span class="border border-primary">
       <h5 class="card-header">Información personal:</h5>
@@ -76,7 +79,7 @@
   <div class="card pl-3 pr-3 pt-4 pb-3"s>
     <span class="border border-primary">
       <h5 class="card-header">Cambiar contraseña:</h5>
-      
+
     <div class="card-body">
       <form action="main_miperfil.php" method="post">
         <div class="form-group">

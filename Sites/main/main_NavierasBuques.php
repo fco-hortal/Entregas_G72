@@ -1,7 +1,7 @@
-<?php 
+<?php
 include('../templates/header.html');
-$id = $_POST["id"];   
-$name = $_POST["name"];   
+$id = $_POST["id"];
+$name = $_POST["name"];
 ?>
 
 <body>
@@ -23,6 +23,9 @@ $name = $_POST["name"];
       <li class="nav-item">
         <a class="nav-link" href="main_puertos.php">Puertos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main_buscador_rut.php">Buscador</a>
+      </li>
     </div>
   </nav>
 
@@ -32,8 +35,8 @@ $name = $_POST["name"];
     <span class="border border-primary">
       <h5 class="card-header"><?php echo "Mostrando buques de la naviera: $name";?></h5>
       <div class="card-body">
-        <?php 
-        include('../consultas/consulta_BuquesDeNavieras.php');   
+        <?php
+        include('../consultas/consulta_BuquesDeNavieras.php');
         ?>
       </div>
     </span>

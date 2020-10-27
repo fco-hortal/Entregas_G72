@@ -1,4 +1,4 @@
-<?php 
+<?php
 include('../templates/header.html');
 $id = $_POST["id"];
 $name = $_POST["name"];
@@ -22,6 +22,9 @@ $name = $_POST["name"];
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="main_puertos.php">Puertos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main_buscador_rut.php">Buscador</a>
       </li>
     </div>
   </nav>
