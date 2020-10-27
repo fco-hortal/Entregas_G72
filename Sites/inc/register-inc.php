@@ -37,6 +37,6 @@ echo "Tratando de crear el usuario";
 $_SESSION['pasaporte'] = $usuario_login;
 //header('location: ../main/main_miperfil.php');
 
-echo $_SESSION['pasaporte']
+echo $_SESSION['pasaporte'];
  
 ?>
