@@ -26,7 +26,7 @@
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 <?php
-    $usuario_login = '1';
+    $usuario_login = $_SESSION['pasaporte'];
     $contraseña_login = $_POST['pass'];
     
 
