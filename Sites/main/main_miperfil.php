@@ -29,10 +29,15 @@ include('../templates/header.html');   ?>
 <?php
     $usuario_login = $_SESSION['pasaporte'];
     $contraseña_login = $_POST['pass'];
-    
-
-
     require "../config/conexion1.php";
+    $sql = 'SELECT * FROM usuarios WHERE usuarios.pasaporte = '$usuario_login';';
+    $result = $db -> prepare($sql);
+    $result -> execute();
+    $resultados = $result -> fetchAll();
+    $nombre1 = $resultados[0]
+    $edad1 = $resultados[1]
+    $sexo1 = $resultados[2]
+    $nacionalidad1 = $resultados[4]
     ?>
   <div class="card pl-3 pr-3 pt-4 pb-3">
     <span class="border border-primary">
@@ -41,13 +46,13 @@ include('../templates/header.html');   ?>
         <h5 class="card-title">Nombre:</h5>
         <p class="card-text"><?php echo($usuario_login) ?></p>
         <h5 class="card-title">Edad:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"><?php echo($edad1) ?></p>
         <h5 class="card-title">Sexo:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"><?php echo($sexo1) ?></p>
         <h5 class="card-title">Número de pasaporte:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"><?php echo($usuario_login) ?></p>
         <h5 class="card-title">Nacionalidad:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"><?php echo($nacionalidad1) ?></p>
       </div>
     </span>
   </div>
