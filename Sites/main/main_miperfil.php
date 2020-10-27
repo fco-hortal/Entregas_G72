@@ -25,13 +25,19 @@
   </nav>
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<?php
+    $usuario_login = $_POST['user'];
+    $contraseña_login = $_POST['pass'];
 
+
+    require "../config/conexion1.php";
+    ?>
   <div class="card pl-3 pr-3 pt-4 pb-3">
     <span class="border border-primary">
       <h5 class="card-header">Información personal:</h5>
       <div class="card-body">
         <h5 class="card-title">Nombre:</h5>
-        <p class="card-text">"$_SESSION['pp']"</p>
+        <p class="card-text">$usuario_login</p>
         <h5 class="card-title">Edad:</h5>
         <p class="card-text">XXXXXXXXXXX</p>
         <h5 class="card-title">Sexo:</h5>
