@@ -25,8 +25,12 @@ if (uidExist($db, $n_pass) == TRUE) {
 
     exit();
     }
-userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
-/*session_start();
+$sql = "INSERT INTO algo (nombre, edad, sexo, pasaporte, nacionalidad, contraseña, id) VALUES ($nombre, $edad, $sexo,$n_pass, $nac, $pass1, $id)";
+$results = $db -> prepare($sql);    
+$results -> execute();
+echo "Tratando de crear el usuario";
+/*userCreate($db, $nombre, $edad, $sexo, $n_pass, $nac, $pass1);
+session_start();
 $_SESSION['pasaporte'] = $usuario_login;
 header('location: ../main/main_miperfil.php');*/
 
