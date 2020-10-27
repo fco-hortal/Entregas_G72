@@ -43,7 +43,7 @@
 
 <br>
 <br>
-<form action="../main/main_buscador_rut" method="get">
+<form action="../main/main_buscador_rut.php" method="get">
     <button type="submit" class="btn btn-primary btn-lg">Volver</button>
 </form>
 </body>
