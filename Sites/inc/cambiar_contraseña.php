@@ -17,7 +17,7 @@ if (passExist($pass_act, $pasaporte, $db) == TRUE) {
 if ($pass_new1 != $pass_new2) {
     header('location: ../main/main_miperfil.php?error=passwordDontMatch');
     exit();
-}
+};
 $sql1 = 'UPDATE usuarios SET contraseña = '$pass_new2' WHERE pasaporte = '$pasaporte' AND contraseña = '$pass_act';';
 $sql2 = 'UPDATE usuarios SET contraseña = '$pass_new2' AND WHERE pasaporte = '$pasaporte' AND contraseña = '$pass_act'; ';
 $result = $db -> prepare($sql1);
