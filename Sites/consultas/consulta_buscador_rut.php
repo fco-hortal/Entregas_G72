@@ -18,6 +18,10 @@
   $resultados = $result -> fetchAll();
   ?>
 
+<div class="card pl-3 pr-3 pt-4 pb-3"s>
+    <span class="border border-primary">
+      <h5 class="card-header">Información personal:</h5>
+      <div class="card-body">
   <!-- Se crea tabla -->
 
   <table class="table table-bordered">
