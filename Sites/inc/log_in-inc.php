@@ -19,7 +19,7 @@
         session_start();
         $_SESSION['pasaporte'] = $usuario_login;
         echo($_SESSION['pasaporte']);
-        #header('location: ../main/main_miperfil.php');
+        header('location: ../main/main_miperfil.php');
     }
     
 
