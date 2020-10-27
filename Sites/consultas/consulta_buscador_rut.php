@@ -35,9 +35,14 @@
         #Se itera echo en tabla para mostrar resultados segun las columnas de la tabla ---EDITAR-->
         foreach ($resultados as $r) {
           echo "<tr>
-          <td>$r[0]</td>
-          <td>$r[1]</td>
-          <td>$r[2]</td>
+          <td>
+                <form action=\"../main/main_buscador_rut.php\" method=\"post\">
+                  <input type=\"hidden\" class=\"form-control\" name=\"id\" value=\"$r[0]\">
+                  <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[1]\">
+                  <input type=\"hidden\" class=\"form-control\" name=\"name\" value=\"$r[2]\">
+                  <button type=\"input\" class=\"btn btn-primary\"><i class=\"far fa-eye\"></i>Ver buques de naviera</button>
+                </form>
+              </td>
           </tr>";
       }
       ?>
