@@ -13,7 +13,7 @@ function passExist($pass_act, $pasaporte, $db) {
             exit();
         }
     }
-    return TRUE
+    return TRUE;
 }
 
 
