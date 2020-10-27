@@ -37,7 +37,7 @@
       <h5 class="card-header">Información personal:</h5>
       <div class="card-body">
         <h5 class="card-title">Nombre:</h5>
-        <p class="card-text">"$_SESSION['pp']"</p>
+        <p class="card-text">'$usuario_login'</p>
         <h5 class="card-title">Edad:</h5>
         <p class="card-text">XXXXXXXXXXX</p>
         <h5 class="card-title">Sexo:</h5>
