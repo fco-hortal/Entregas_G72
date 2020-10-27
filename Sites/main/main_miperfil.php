@@ -28,6 +28,7 @@
 <?php
     $usuario_login = $_SESSION['pasaporte'];
     $contraseña_login = $_POST['pass'];
+    echo($_SESSION['pasaporte']);
 
 
     require "../config/conexion1.php";
