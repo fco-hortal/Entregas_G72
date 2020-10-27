@@ -14,10 +14,10 @@
     <div class="card-header">
       <ul class="nav nav-pills card-header-pills justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Loguear</a>
+          <a class="nav-link" href="index.php">Log in</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Registrar</a>
+          <a class="nav-link active" href="#">Sign in</a>
         </li>
       </ul>
     </div>
