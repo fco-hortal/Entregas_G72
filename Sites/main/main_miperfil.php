@@ -81,7 +81,7 @@
       <h5 class="card-header">Cambiar contraseña:</h5>
 
     <div class="card-body">
-      <form action="main_miperfil.php" method="post">
+      <form action="../inc/cambiar_contraseña.php" method="post">
         <div class="form-group">
           <label>Ingrese su actual contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1" name="pass_old">
