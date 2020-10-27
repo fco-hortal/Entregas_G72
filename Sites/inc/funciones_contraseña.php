@@ -2,7 +2,7 @@
 
 function passExist($pass_act, $pasaporte, $db) {
     $state = TRUE;
-    $sql = 'SELECT pasaporte, contraseña FROM usuarios WHERE usuarios.pasaporte = '$pasaporte' ;';
+    $sql = 'SELECT pasaporte, contraseña FROM usuarios WHERE usuarios.pasaporte = $pasaporte;';
     $result = $db -> prepare($sql);
     $result -> execute();
     $resultados = $result -> fetchAll();
@@ -13,7 +13,7 @@ function passExist($pass_act, $pasaporte, $db) {
             exit();
         }
     }
-    return TRUE
+    return TRUE;
 }
 
 
