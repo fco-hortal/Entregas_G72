@@ -5,7 +5,7 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">GRUPO 133+72</h1>
-      <p class="lead">DEMO DEMO DEMO DEMO DEMO DEMO DEMO DEMO DEMO DEMO DEMO DEMO DEMO DEMO</p>
+      <p class="lead">Master Piece</p>
     </div>
   </div>
 
