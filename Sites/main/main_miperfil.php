@@ -62,17 +62,17 @@ include('../templates/header.html');   ?>
       <h5 class="card-header">Información para capitanes:</h5>
       <div class="card-body">
         <h5 class="card-title">Nombre de su buque:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
         <h5 class="card-title">Patente:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
         <h5 class="card-title">Tipo de buque:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
         <h5 class="card-title">Nombre de naviera a la que pertenece:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
         <h5 class="card-title">Próximo itinerario:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
         <h5 class="card-title">Últimos 5 lugares en los que ha estado el buque:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
       </div>
     </span>
   </div>
@@ -82,9 +82,9 @@ include('../templates/header.html');   ?>
       <h5 class="card-header">Información para jefes de instalaciones:</h5>
       <div class="card-body">
         <h5 class="card-title">Puerto en el que trabaja:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
         <h5 class="card-title">Tipo de instalación a cargo:</h5>
-        <p class="card-text">XXXXXXXXXXX</p>
+        <p class="card-text"></p>
       </div>
     </span>
   </div>
