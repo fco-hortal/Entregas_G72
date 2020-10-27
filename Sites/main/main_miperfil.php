@@ -34,7 +34,7 @@ include('../templates/header.html');   ?>
     $result = $db -> prepare($sql);
     $result -> execute();
     $resultados = $result -> fetchAll();
-    echo($resultados[0])
+    echo($resultados[0]);
     $nombre1 = $resultados[0];
     $edad1 = $resultados[1];
     $sexo1 = $resultados[2];
