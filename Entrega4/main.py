@@ -12,7 +12,7 @@ db = client["grupo72"]
 
 app = Flask(__name__) 
 
-@app.route('/')
+@app.route('/users')
 def hello_world():
     return 'Hello qweqweq!'
 
