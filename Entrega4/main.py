@@ -1,4 +1,4 @@
-from flask import Flask, json
+from flask import Flask, json, request
 from pymongo import MongoClient
 
 USER = "grupo72"
@@ -24,9 +24,26 @@ def get_user_id(uid):
     mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
     return json.jsonify(usuario + mensajes)
 
-@app.route('/text-search')
-def get_textSearch(body):
-    pass
+REQUEST_KEYS = ["desired","required","forbidden", "userId"]
+
+@app.route('/text-search') #FALTA HACER A PRUEBA DE ERRORES E IMPUTS VACIOS
+def text_search():
+    query = {key: request.json[key] for key in REQUEST_KEYS}
+    
+    db.mensajes.create_index([('message', 'text')])
+
+    desired, required, forbidden, userId = "", "", "", ""
+
+    for item in query["desired"]:
+        desired = desired + " " + str(item)
+    for item in query["required"]:
+        required = required + " \"" + str(item) + "\""
+    for item in query["forbidden"]:
+        forbidden = forbidden + " -" + str(item)
+    req = desired + required + forbidden
+
+    response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
+    return json.jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)
