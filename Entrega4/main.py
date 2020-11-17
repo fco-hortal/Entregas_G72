@@ -18,7 +18,7 @@ def get_users():
     usuarios = list(db.usuarios.find({},{"_id":0}))
     return json.jsonify(usuarios)
 
-@app.route('/users:<int:uid>')
+@app.route('/users/<int:uid>')
 def get_user_id(uid):
     usuario = list(db.usuarios.find({"uid":uid},{"_id":0}))
     mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
