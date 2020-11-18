@@ -45,5 +45,11 @@ def text_search():
     response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
     return json.jsonify(response)
 
+
+@app.route('/messages/<int:uid>, methods=['DELETE']')
+def delete_msg():
+    id = request.json['id']
+    db.mensajes.remove({'id', id})
+    return json.jsonify({"success": True})
 if __name__ == '__main__':
     app.run(debug=True)
