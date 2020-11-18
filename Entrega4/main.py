@@ -46,7 +46,7 @@ def text_search():
     return json.jsonify(response)
 
 
-@app.route('/messages/<int:uid>, methods=['DELETE']')
+@app.route('/messages/<int:uid>', methods=['DELETE'])
 def delete_msg():
     id = request.json['id']
     db.mensajes.remove({'id', id})
