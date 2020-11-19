@@ -48,8 +48,8 @@ def text_search():
 #Implementamos una manera de visualizar los mensajes
 @app.route('/message')
 def get_msg():
-    usuarios = list(db.mensajes.find({},{"_id":0}))
-    return json.jsonify(usuarios)
+    mensajes = list(db.mensajes.find({},{"_id":0}))
+    return json.jsonify(mensajes)
 
 @app.route('/message/<int:mid>', methods=['DELETE'])
 def delete_msg(mid):
@@ -67,9 +67,9 @@ def post_msg():
     mayor = 0
     mensajes = list(db.mensajes.find({},{"_id":0}))
     for i in mensajes:
-        if i["mid"] >= mayor:
+        if i["mid"] > mayor:
             mayor = i["mid"]
-            
+
     data = {key: request.json[key] for key in POST_KEYS}
     data['mid'] = 1
     if data['message'] == '' or data['message'] is None:
