@@ -88,6 +88,7 @@ def text_search():
         response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
     return json.jsonify(response)
 
+#######DELETE#######
 
 @app.route('/message/<int:mid>', methods=['DELETE'])
 def delete_msg(mid):
@@ -99,6 +100,8 @@ def delete_msg(mid):
         return json.jsonify({"success": True})
 
 POST_KEYS = ['message', 'sender', 'receptant', 'lat', 'long', 'date']
+
+#######POST#######
 
 @app.route('/messages', methods=['POST'])
 def post_msg():
