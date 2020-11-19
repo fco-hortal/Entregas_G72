@@ -64,6 +64,12 @@ POST_KEYS = ['message', 'sender', 'receptant', 'lat', 'long', 'date']
 
 @app.route('/messages', methods=['POST'])
 def post_msg():
+    mayor = 0
+    mensajes = list(db.mensajes.find({},{"_id":0}))
+    for i in mensajes:
+        if i["mid"] >= mayor:
+            mayor = i["mid"]
+            
     data = {key: request.json[key] for key in POST_KEYS}
     data['mid'] = 1
     if data['message'] == '' or data['message'] is None:
