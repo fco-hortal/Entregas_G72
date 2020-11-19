@@ -71,7 +71,7 @@ def post_msg():
             mayor = i["mid"]
 
     data = {key: request.json[key] for key in POST_KEYS}
-    data['mid'] = 1
+    data['mid'] = mayor + 1
     if data['message'] == '' or data['message'] is None:
         return json.jsonify({"success": False})
 
