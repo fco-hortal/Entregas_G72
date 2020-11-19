@@ -40,8 +40,6 @@ def get_user_id(uid):
     mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
     return json.jsonify(usuario + mensajes)
 
-
-
 @app.route('/text-search') #FALTA HACER A PRUEBA DE ERRORES E INPUTS VACIOS
 def text_search():
     REQUEST_KEYS = []
