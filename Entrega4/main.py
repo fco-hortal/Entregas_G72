@@ -75,7 +75,7 @@ def post_msg():
     if data['message'] == '' or data['message'] is None:
         return json.jsonify({"success": False})
 
-    elif isinstance(data[''], int) == False or data['sender'] is None:
+    elif isinstance(data['sender'], int) == False or data['sender'] is None:
         return json.jsonify({"success": False})
 
     elif isinstance(data['receptant'], int) == False or data['receptant'] is None:
