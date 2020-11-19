@@ -66,6 +66,31 @@ POST_KEYS = ['message', 'sender', 'receptant', 'lat', 'long', 'date']
 def post_msg():
     data = {key: request.json[key] for key in POST_KEYS}
     data['mid'] = 1
+    if data['message'] == '' or data['message'] is None:
+        return json.jsonify({"success": False})
+
+    elif isinstance(data[''], int) == False or data['sender'] is None:
+        return json.jsonify({"success": False})
+
+    elif isinstance(data['receptant'], int) == False or data['receptant'] is None:
+        return json.jsonify({"success": False})
+    
+    
+    if isinstance(data['lat'], float) == False or data['lat'] is None:
+        return json.jsonify({"success": False})
+    
+    if isinstance(data['long'], float) == False or data['long'] is None:
+        return json.jsonify({"success": False})
+
+    j = data['date']
+    x = j.split('-')
+    
+
+    
+
+    
+
+
     result = db.mensajes.insert_one(data)
 
     return json.jsonify({"success": True})
