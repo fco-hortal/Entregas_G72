@@ -51,11 +51,6 @@ def get_msg():
     usuarios = list(db.mensajes.find({},{"_id":0}))
     return json.jsonify(usuarios)
 
-@app.route('/messages/<int:mid>')
-def get_msg1(mid):
-    usuarios = list(db.mensajes.find({"mid":mid}))
-    return json.jsonify(usuarios)
-
 @app.route('/message/<int:mid>', methods=['DELETE'])
 def delete_msg(mid):
     mensaje = list(db.mensajes.find({"mid":mid}))
@@ -68,10 +63,10 @@ def delete_msg(mid):
 POST_KEYS = ['message', 'sender', 'receptant', 'lat', 'long', 'date']
 
 @app.route('/messages', methods=['POST'])
-def delete_msg():
+def post_msg():
     data = {key: request.json[key] for key in POST_KEYS}
     data['mid'] = 1
-    result = mensajes.insert_one(data)
+    result = db.mensajes.insert_one(data)
 
     return json.jsonify({"success": True})
 if __name__ == '__main__':
