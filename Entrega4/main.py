@@ -24,25 +24,44 @@ def get_user_id(uid):
     mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
     return json.jsonify(usuario + mensajes)
 
-REQUEST_KEYS = ["desired","required","forbidden", "userId"]
 
-@app.route('/text-search') #FALTA HACER A PRUEBA DE ERRORES E IMPUTS VACIOS
+
+@app.route('/text-search') #FALTA HACER A PRUEBA DE ERRORES E INPUTS VACIOS
 def text_search():
+    REQUEST_KEYS = []
+    if "desired" in request.json.keys():
+        REQUEST_KEYS.append("desired")
+    if "required" in request.json.keys():
+        REQUEST_KEYS.append("required")
+    if "forbidden" in request.json.keys():
+        REQUEST_KEYS.append("forbidden")
+    if "userId" in request.json.keys():
+        REQUEST_KEYS.append("userId")
+
     query = {key: request.json[key] for key in REQUEST_KEYS}
     
     db.mensajes.create_index([('message', 'text')])
-
     desired, required, forbidden, userId = "", "", "", ""
 
-    for item in query["desired"]:
-        desired = desired + " " + str(item)
-    for item in query["required"]:
-        required = required + " \"" + str(item) + "\""
-    for item in query["forbidden"]:
-        forbidden = forbidden + " -" + str(item)
+    if 'desired' in query.keys():
+        for item in query["desired"]:
+            desired = desired + " " + str(item)
+    if 'required' in query.keys():
+        for item in query["required"]:
+            required = required + " \"" + str(item) + "\""
+    if 'forbidden' in query.keys():
+        for item in query["forbidden"]:
+            forbidden = forbidden + " -" + str(item)
+    if 'userId' in query.keys():
+        userId = query["userId"]
     req = desired + required + forbidden
 
-    response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
+    if len(req) == 0 and userId == "":
+        response = list(db.mensajes.find({},{"_id":0}))
+    elif userId != "":
+        response = list(db.mensajes.find({"$text": {"$search": req[1:]}, "sender": userId},{"_id":0}))
+    else:
+        response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
     return json.jsonify(response)
 
 #Implementamos una manera de visualizar los mensajes
