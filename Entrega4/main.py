@@ -39,9 +39,9 @@ def get_user_id(uid):
     usuario = list(db.usuarios.find({"uid":uid},{"_id":0}))
     mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
     return json.jsonify(usuario + mensajes)
+
 #Implementamos una manera de visualizar los mensajes enviados entre dos ususarios 
 #sabiendo su id en el URL de la forma '/messages/?id1=57&id2=35'
-
 @app.route('/messages/')
 def get_messages_exchanged():
     arg = request.args.to_dict()
