@@ -64,5 +64,15 @@ def delete_msg(mid):
     else:
         db.mensajes.remove({'mid':mid})
         return json.jsonify({"success": True})
+
+POST_KEYS = ['message', 'sender', 'receptant', 'lat', 'long', 'date']
+
+@app.route('/messages', methods=['POST'])
+def delete_msg():
+    data = {key: request.json[key] for key in POST_KEYS}
+    data['mid'] = 1
+    result = mensajes.insert_one(data)
+
+    return json.jsonify({"success": True})
 if __name__ == '__main__':
     app.run(debug=True)
