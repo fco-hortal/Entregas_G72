@@ -45,11 +45,15 @@ def text_search():
     response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
     return json.jsonify(response)
 
+#Implementamos una manera de visualizar los mensajes
+@app.route('/message')
+def get_msg():
+    usuarios = list(db.mensajes.find({},{"_id":0}))
+    return json.jsonify(usuarios)
 
-@app.route('/messages/<int:uid>', methods=['DELETE'])
-def delete_msg():
-    id = request.json['id']
-    db.mensajes.remove({'id', id})
+@app.route('/message/<int:mid>', methods=['DELETE'])
+def delete_msg(mid):
+    db.mensajes.remove({'mid': mid})
     return json.jsonify({"success": True})
 if __name__ == '__main__':
     app.run(debug=True)
