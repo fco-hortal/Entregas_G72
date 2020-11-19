@@ -98,23 +98,30 @@ def post_msg():
         if i["mid"] > mayor:
             mayor = i["mid"]
 
+    for i in POST_KEYS:
+        try:
+            request.json[i]
+        except KeyError:
+            return json.jsonify({"success": False, "atributo": i})
+    
+
     data = {key: request.json[key] for key in POST_KEYS}
     data['mid'] = mayor + 1
     if data['message'] == '' or data['message'] is None:
-        return json.jsonify({"success": False})
+        return json.jsonify({"success": False, "atributo": "message"})
 
     elif isinstance(data['sender'], int) == False or data['sender'] is None:
-        return json.jsonify({"success": False})
+        return json.jsonify({"success": False, "atributo": "sender"})
 
     elif isinstance(data['receptant'], int) == False or data['receptant'] is None:
-        return json.jsonify({"success": False})
+        return json.jsonify({"success": False, "atributo": 'receptant'})
     
     
     if isinstance(data['lat'], float) == False or data['lat'] is None:
-        return json.jsonify({"success": False})
+        return json.jsonify({"success": False, "atributo": 'lat'})
     
     if isinstance(data['long'], float) == False or data['long'] is None:
-        return json.jsonify({"success": False})
+        return json.jsonify({"success": False, "atributo": 'long'})
 
     j = data['date']
     x = j.split('-')
