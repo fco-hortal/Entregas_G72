@@ -51,9 +51,18 @@ def get_msg():
     usuarios = list(db.mensajes.find({},{"_id":0}))
     return json.jsonify(usuarios)
 
+@app.route('/messages/<int:mid>')
+def get_msg1(mid):
+    usuarios = list(db.mensajes.find({"mid":mid}))
+    return json.jsonify(usuarios)
+
 @app.route('/message/<int:mid>', methods=['DELETE'])
 def delete_msg(mid):
-    db.mensajes.remove({'mid': mid})
-    return json.jsonify({"success": True})
+    mensaje = list(db.mensajes.find({"mid":mid}))
+    if mensaje == []:
+        return("Error. No existe el mensaje que quiere borrar.")
+    else:
+        db.mensajes.remove({'mid':mid})
+        return json.jsonify({"success": True})
 if __name__ == '__main__':
     app.run(debug=True)
