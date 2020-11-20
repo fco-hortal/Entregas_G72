@@ -40,29 +40,9 @@ def get_user_id(uid):
     mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
     return json.jsonify(usuario + mensajes)
 
-#Implementamos una manera de visualizar los mensajes enviados entre dos ususarios 
-#sabiendo su id en el URL de la forma '/messages/?id1=57&id2=35'
-@app.route('/messages/')
-def get_messages_exchanged():
-    arg = request.args.to_dict()
-    data =  list(arg.keys())
-    mensajes1 = list(db.mensajes.find({"sender": int(arg[data[0]]), "receptant":int(arg[data[1]])}, {"_id":0}))
-    mensajes2 = list(db.mensajes.find({"sender": int(arg[data[1]]), "receptant":int(arg[data[0]])}, {"_id":0}))
-    return json.jsonify(mensajes1 + mensajes2)
-
 @app.route('/text-search') #FALTA HACER A PRUEBA DE ERRORES E INPUTS VACIOS
 def text_search():
-    REQUEST_KEYS = []
-    if "desired" in request.json.keys():
-        REQUEST_KEYS.append("desired")
-    if "required" in request.json.keys():
-        REQUEST_KEYS.append("required")
-    if "forbidden" in request.json.keys():
-        REQUEST_KEYS.append("forbidden")
-    if "userId" in request.json.keys():
-        REQUEST_KEYS.append("userId")
-
-    query = {key: request.json[key] for key in REQUEST_KEYS}
+    query = {key: request.json[key] for key in request.json.keys()}
     
     db.mensajes.create_index([('message', 'text')])
     desired, required, forbidden, userId = "", "", "", ""
@@ -80,15 +60,17 @@ def text_search():
         userId = query["userId"]
     req = desired + required + forbidden
 
+    print(f"req:[{req}], uid[{userId}]")
+
     if len(req) == 0 and userId == "":
         response = list(db.mensajes.find({},{"_id":0}))
+    elif len(req) == 0 and userId != "":
+        response = list(db.mensajes.find({"sender": userId},{"_id":0}))
     elif userId != "":
         response = list(db.mensajes.find({"$text": {"$search": req[1:]}, "sender": userId},{"_id":0}))
     else:
         response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
     return json.jsonify(response)
-
-#######DELETE#######
 
 @app.route('/message/<int:mid>', methods=['DELETE'])
 def delete_msg(mid):
@@ -101,8 +83,6 @@ def delete_msg(mid):
 
 POST_KEYS = ['message', 'sender', 'receptant', 'lat', 'long', 'date']
 
-#######POST#######
-
 @app.route('/messages', methods=['POST'])
 def post_msg():
     mayor = 0
@@ -111,30 +91,22 @@ def post_msg():
         if i["mid"] > mayor:
             mayor = i["mid"]
 
-    for i in POST_KEYS:
-        try:
-            request.json[i]
-        except KeyError:
-            return json.jsonify({"success": False, "atributo": i})
-    
-
     data = {key: request.json[key] for key in POST_KEYS}
     data['mid'] = mayor + 1
     if data['message'] == '' or data['message'] is None:
-        return json.jsonify({"success": False, "atributo": "message"})
+        return json.jsonify({"success": False})
 
     elif isinstance(data['sender'], int) == False or data['sender'] is None:
-        return json.jsonify({"success": False, "atributo": "sender"})
+        return json.jsonify({"success": False})
 
     elif isinstance(data['receptant'], int) == False or data['receptant'] is None:
-        return json.jsonify({"success": False, "atributo": 'receptant'})
-    
+        return json.jsonify({"success": False})
     
     if isinstance(data['lat'], float) == False or data['lat'] is None:
-        return json.jsonify({"success": False, "atributo": 'lat'})
+        return json.jsonify({"success": False})
     
     if isinstance(data['long'], float) == False or data['long'] is None:
-        return json.jsonify({"success": False, "atributo": 'long'})
+        return json.jsonify({"success": False})
 
     j = data['date']
     x = j.split('-')
