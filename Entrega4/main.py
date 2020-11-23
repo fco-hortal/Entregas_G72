@@ -28,7 +28,7 @@ def get_messages_id(mid):
         mensaje = list(db.mensajes.find({"mid":mid},{"_id":0}))
         return json.jsonify(mensaje)
     except ValueError:
-        return 'El id ingresado no es válido'
+        return json.jsonify({"success": False, "razon": 'El id ingresado no es válido'})
 
 #Implementamos una manera de visualizar los ususarios
 @app.route('/users')
@@ -43,11 +43,11 @@ def get_user_id(uid):
         usuario = list(db.usuarios.find({"uid":uid},{"_id":0}))
         mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
         if usuario == []:
-            return ("Error. No existe un usuario con ese id.")
+           return json.jsonify({"success": False, "razon":"Error. No existe un usuario con ese id."})
         else:
             return json.jsonify(usuario + mensajes)
      except ValueError:
-        return 'El id ingresado no es válido'
+        return json.jsonify({"success": False, "razon":'El id ingresado no es válido'})
  
 #Implementamos una manera en la que al ingresar dos ID en el URL de la siguiente manera 
 #/messages/?id=145&id2=89 (los nombres de las variables no necesitan ser id especificamente)
@@ -62,9 +62,9 @@ def get_messages_exchanged():
         if len(mensajes1 + mensajes2) != 0: 
             return json.jsonify(mensajes1 + mensajes2)
         else:
-            return 'No hay mensajes para estos id'
+            return json.jsonify({"success": False, "razon":'No hay mensajes para estos id'})
     except ValueError:
-        return 'Un id ingresado no es válido'
+        return json.jsonify({"success": False, "razon":'Un id ingresado no es válido'})
 
    
 @app.route('/text-search') 
