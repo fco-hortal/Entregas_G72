@@ -8,9 +8,9 @@ Se trabajo con Mongo y Python. Se utilizo un pipenv para poder trabajar con las 
 ### Funciones:
 
 * /messages
-	* /messages (get_messages()): Esta función devuelve todos los mensajes disponibles en la base de datos.
-	* /messages/[id] (get_messages_id(mid)): Esta función recibe como parámetro un id el cual debe ser int, si no lo es levanta un ValueError y devuelve un mensaje en formato json que dice que el formato del id es invalido, si es int busca el id correspondiente a este mensaje, de no existir devuelve un mensaje como json el que dice que no existe un mensaje con este id.
-	* /messages/ (get_messages_exchanged()): Esta funcion recibe dos parametros que son ID entregados en el URL de la siguiente manera '/messages/?id=XX&id2=XX' (los nombres de las variables no necesitan ser id especificamente), si los id son válidos devuelve todos los mensajes intercambiados entre estos usuarios.
+	* get_messages()('/messages'): Esta función devuelve todos los mensajes disponibles en la base de datos.
+	* get_messages_id(mid)('/messages/id'): Esta función recibe como parámetro un id el cual debe ser int, si no lo es levanta un ValueError y devuelve un mensaje en formato json que dice que el formato del id es invalido, si es int busca el id correspondiente a este mensaje, de no existir devuelve un mensaje como json el que dice que no existe un mensaje con este id.
+	* get_messages_exchanged()('/messages/'): Esta funcion recibe dos parametros que son ID entregados en el URL de la siguiente manera '/messages/?id=XX&id2=XX' (los nombres de las variables no necesitan ser id especificamente), si los id son válidos devuelve todos los mensajes intercambiados entre estos usuarios.
 * /users
 	* 
 * /text-search
