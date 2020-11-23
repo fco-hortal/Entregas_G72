@@ -23,7 +23,7 @@ Se trabajo con Mongo y Python. Se utilizo un pipenv para poder trabajar con las 
 
 
 ## Ejecución
-
+Al ejecutar pipenv para crear el ambiente con las librerías utilizadas, al correr el archivo main.py este estará escuchando desde el localhost por posibles llamados a los URL correspondientes a las funciones mencionadas anteriormente.
 
 
 ## Supuestos y consideraciones adicionales
