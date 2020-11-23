@@ -14,9 +14,9 @@ Se trabajo con Mongo y Python. Se utilizo un pipenv para poder trabajar con las 
 * /text-search
 	*
 * POST
-	*La función agrega correctamente el elemento al servidor. Si falta información no funcionará la función
+	* La función agrega correctamente el elemento al servidor. Si falta información no funcionará la función
 * DELETE
-	*La función elimina el elemento con el Id elegido correctamente. Si el Id no existe se obtendra el error:"id no existe"
+	* La función elimina el elemento con el Id elegido correctamente. Si el Id no existe se obtendra el error: "id no existe"
 
 
 ## Ejecución
