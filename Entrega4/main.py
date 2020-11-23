@@ -38,13 +38,21 @@ def get_users():
 def get_user_id(uid):
     usuario = list(db.usuarios.find({"uid":uid},{"_id":0}))
     mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
-    return json.jsonify(usuario + mensajes)
+    if usuario == []:
+        return ("Error. No existe un usuario con ese id.")
+    else:
+        return json.jsonify(usuario + mensajes)
 
 @app.route('/text-search') #FALTA HACER A PRUEBA DE ERRORES E INPUTS VACIOS
 def text_search():
-    query = {key: request.json[key] for key in request.json.keys()}
-    
     db.mensajes.create_index([('message', 'text')])
+    try:
+        query = {key: request.json[key] for key in request.json.keys()}
+    except:
+        response = db.mensajes.find({},{"_id":0})
+        return json.jsonify(list(response))
+    
+    
     desired, required, forbidden, userId = "", "", "", ""
 
     if 'desired' in query.keys():
@@ -55,22 +63,35 @@ def text_search():
             required = required + " \"" + str(item) + "\""
     if 'forbidden' in query.keys():
         for item in query["forbidden"]:
-            forbidden = forbidden + " -" + str(item)
+            forbidden = forbidden + " -\"" + str(item) + "\""
     if 'userId' in query.keys():
         userId = query["userId"]
+
+    forbidden_error = False
+    if len(desired + required) == 0 and len(forbidden) != 0:
+        forbidden = ""
+        forbidden_error = True
+        for item in query["forbidden"]:
+            forbidden = forbidden + " \"" + str(item) + "\""
+
     req = desired + required + forbidden
 
     print(f"req:[{req}], uid[{userId}]")
 
     if len(req) == 0 and userId == "":
-        response = list(db.mensajes.find({},{"_id":0}))
+        response = db.mensajes.find({},{"_id":0})
     elif len(req) == 0 and userId != "":
-        response = list(db.mensajes.find({"sender": userId},{"_id":0}))
-    elif userId != "":
-        response = list(db.mensajes.find({"$text": {"$search": req[1:]}, "sender": userId},{"_id":0}))
+        response = db.mensajes.find({"sender": userId},{"_id":0})
+    elif len(req) != 0 and userId != "":
+        response = db.mensajes.find({"$text": {"$search": req[1:]}, "sender": userId},{"_id":0})
     else:
-        response = list(db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0}))
-    return json.jsonify(response)
+        response = db.mensajes.find({"$text": {"$search": req[1:]}},{"_id":0})
+
+    if forbidden_error:
+        all = db.mensajes.find({},{"_id":0})
+        response = set(list(all).values()) - set(list(response.values())) 
+    
+    return json.jsonify(list(response))
 
 @app.route('/message/<int:mid>', methods=['DELETE'])
 def delete_msg(mid):
@@ -113,7 +134,6 @@ def post_msg():
     
 
     
-
     
 
     result = db.mensajes.insert_one(data)
