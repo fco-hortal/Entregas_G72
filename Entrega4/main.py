@@ -26,7 +26,10 @@ def get_messages():
 def get_messages_id(mid):
     try:
         mensaje = list(db.mensajes.find({"mid":mid},{"_id":0}))
-        return json.jsonify(mensaje)
+        if mensaje == []:
+           return json.jsonify({"success": False, "razon":"Error. No existe un mensaje con ese id."})
+        else:
+            return json.jsonify(mensaje)
     except ValueError:
         return json.jsonify({"success": False, "razon": 'El id ingresado no es válido'})
 
