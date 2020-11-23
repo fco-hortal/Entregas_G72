@@ -24,8 +24,11 @@ def get_messages():
 #Implementamos una manera de visualizar los mensajes pedidos segun su id
 @app.route('/messages/<int:mid>')
 def get_messages_id(mid):
-    mensaje = list(db.mensajes.find({"mid":mid},{"_id":0}))
-    return json.jsonify(mensaje)
+    try:
+        mensaje = list(db.mensajes.find({"mid":mid},{"_id":0}))
+        return json.jsonify(mensaje)
+    except ValueError:
+        return 'El id ingresado no es válido'
 
 #Implementamos una manera de visualizar los ususarios
 @app.route('/users')
@@ -36,14 +39,35 @@ def get_users():
 #Implementamos una manera de visualizar los ususarios pedidos segun su id y sus mensajes enviados
 @app.route('/users/<int:uid>')
 def get_user_id(uid):
-    usuario = list(db.usuarios.find({"uid":uid},{"_id":0}))
-    mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
-    if usuario == []:
-        return ("Error. No existe un usuario con ese id.")
-    else:
-        return json.jsonify(usuario + mensajes)
+    try:
+        usuario = list(db.usuarios.find({"uid":uid},{"_id":0}))
+        mensajes = list(db.mensajes.find({"sender":uid},{"_id":0}))
+        if usuario == []:
+            return ("Error. No existe un usuario con ese id.")
+        else:
+            return json.jsonify(usuario + mensajes)
+     except ValueError:
+        return 'El id ingresado no es válido'
+ 
+#Implementamos una manera en la que al ingresar dos ID en el URL de la siguiente manera 
+#/messages/?id=145&id2=89 (los nombres de las variables no necesitan ser id especificamente)
+#te entrega sus mensajes intercambiados
+@app.route('/messages/')
+def get_messages_exchanged():
+    try:
+        arg = request.args.to_dict()
+        data =  list(arg.keys())
+        mensajes1 = list(db.mensajes.find({"sender": int(arg[data[0]]), "receptant":int(arg[data[1]])}, {"_id":0}))
+        mensajes2 = list(db.mensajes.find({"sender": int(arg[data[1]]), "receptant":int(arg[data[0]])}, {"_id":0}))
+        if len(mensajes1 + mensajes2) != 0: 
+            return json.jsonify(mensajes1 + mensajes2)
+        else:
+            return 'No hay mensajes para estos id'
+    except ValueError:
+        return 'Un id ingresado no es válido'
 
-@app.route('/text-search') #FALTA HACER A PRUEBA DE ERRORES E INPUTS VACIOS
+   
+@app.route('/text-search') 
 def text_search():
     db.mensajes.create_index([('message', 'text')])
     try:
