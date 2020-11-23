@@ -76,7 +76,8 @@ def text_search():
 def delete_msg(mid):
     mensaje = list(db.mensajes.find({"mid":mid}))
     if mensaje == []:
-        return("Error. No existe el mensaje que quiere borrar.")
+        return json.jsonify({"success": False, "error": "id no existe"})
+
     else:
         db.mensajes.remove({'mid':mid})
         return json.jsonify({"success": True})
