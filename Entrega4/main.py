@@ -49,7 +49,7 @@ def get_user_id(uid):
            return json.jsonify({"success": False, "razon":"Error. No existe un usuario con ese id."})
         else:
             return json.jsonify(usuario + mensajes)
-     except ValueError:
+    except ValueError:
         return json.jsonify({"success": False, "razon":'El id ingresado no es válido'})
  
 #Implementamos una manera en la que al ingresar dos ID en el URL de la siguiente manera 
