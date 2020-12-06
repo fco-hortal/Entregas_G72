@@ -1,9 +1,6 @@
 <?php
 session_start();
 include('templates/header.html');
-
-
-
 ?>
 
 <body>
