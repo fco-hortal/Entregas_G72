@@ -36,14 +36,16 @@ include('../templates/header.html');   ?>
     <span class="border border-primary">
       <h5 class="card-header">Mapa:</h5>
       <div class="card-body">
-        <?php
-        $lat = -33.5;
-        $long = -70.5;
-        $marker_list = [
-          ["lat" => -33.4,
-          "long" => -70.5],
-          ["lat" => -33.4,
-          "long" => -70.8]
+        <?php 
+          $lat = -33.5;
+          $long = -70.5;
+          $marker_list = [
+              ["lat" => -33.4,
+              "long" => -70.5],
+              ["lat" => -33.6,
+              "long" => -70.5],
+              ["lat" => -33.5,
+              "long" => -70.6],
           ];
         ?>
         <div id="mapid" style="height:400px">
@@ -55,23 +57,19 @@ include('../templates/header.html');   ?>
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
   <br>
 </body>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
   crossorigin=""></script>
 <script>
-  var mymap = L.map('mapid').setView([<?php echo $lat ?>, <?php echo $long ?>], 10);
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
-    }).addTo(mymap);
+  var map = L.map('mapid').setView([<?php echo $lat ?>, <?php echo $long ?>], 10);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
   <?php foreach($marker_list as $marker) {
-    echo
-    'L.marker(['$marker['lat']','$marker['long']']).addTo(mymap);';
+      echo 
+      'L.marker([' . $marker["lat"] . ',' . $marker["long"] . ']).addTo(map);';
   } ?>
 
 </script>
