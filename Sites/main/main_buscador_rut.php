@@ -46,12 +46,59 @@
     <span class="border border-primary">
       <h5 class="card-header">Revisar mensajes recibidos</h5>
       <div class="card-body">
-        <form action="../consultas/consulta_mensaje.php" method="post">
+        <form action="../consultas/consulta_mensaje_recibidos.php" method="post">
           <button type="input" class="btn btn-primary">Buscar</button>
         </form>
       </div>
     </span>
   </div>
+
+  <div class="card pl-3 pr-3 pt-4 pb-3"s>
+    <span class="border border-primary">
+      <h5 class="card-header">Revisar mensajes enviados</h5>
+      <div class="card-body">
+        <form action="../consultas/consulta_mensaje_enviados.php" method="post">
+          <button type="input" class="btn btn-primary">Buscar</button>
+        </form>
+      </div>
+    </span>
+  </div>
+
+  <div class="card pl-3 pr-3 pt-4 pb-3"s>
+    <span class="border border-primary">
+      <h5 class="card-header">Enviar mensaje a:</h5>
+      <div class="card-body">
+        <form action="../consultas/consulta_mensaje_enviar.php" method="post">
+          <div class="form-group">
+            <label>Ingrese usuario:</label>
+            <input type="text" class="form-control" name="usuario">
+          </div>
+          <div class="form-group">
+            <label>Ingrese mensaje:</label>
+            <input type="text" class="form-control" name="mensaje">
+          </div>
+          <button type="input" class="btn btn-primary">Buscar</button>
+        </form>
+      </div>
+    </span>
+  </div>
+  
+  <div class="card pl-3 pr-3 pt-4 pb-3"s>
+    <span class="border border-primary">
+      <h5 class="card-header">Buscar mensaje por texto</h5>
+      <div class="card-body">
+        <form action="../consultas/consulta_mensaje_buscar.php" method="post">
+          <div class="form-group">
+            <label>Ingrese texto:</label>
+            <input type="text" class="form-control" name="texto">
+          </div>
+          <button type="input" class="btn btn-primary">Buscar</button>
+        </form>
+      </div>
+    </span>
+  </div>
+
+
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
 <br>
