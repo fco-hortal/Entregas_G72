@@ -44,7 +44,7 @@ include('../templates/header.html');   ?>
           "long" => -70.5],
           ["lat" => -33.4,
           "long" => -70.8]
-        ];
+          ];
         ?>
         <div id="mapid" style="height:400px">
         </div>
@@ -68,5 +68,11 @@ include('../templates/header.html');   ?>
     zoomOffset: -1,
     accessToken: 'your.mapbox.access.token'
     }).addTo(mymap);
+
+  <?php foreach($marker_list as $marker) {
+    echo
+    'L.marker(['$marker['lat']','$marker['long']']).addTo(mymap)';
+  } ?>
+
 </script>
 </html>
