@@ -26,6 +26,9 @@ $name = $_POST["name"];
       <li class="nav-item">
         <a class="nav-link" href="main_buscador_rut.php">Buscador</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main_PDI.php">Funcionalidades PDI</a>
+      </li>
     </div>
   </nav>
 
