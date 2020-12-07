@@ -71,7 +71,7 @@ include('../templates/header.html');   ?>
 
   <?php foreach($marker_list as $marker) {
     echo
-    'L.marker(['$marker['lat']','$marker['long']']).addTo(mymap)';
+    'L.marker(['$marker['lat']','$marker['long']']).addTo(mymap);';
   } ?>
 
 </script>
