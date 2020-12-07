@@ -36,6 +36,8 @@ include('../templates/header.html');   ?>
     <span class="border border-primary">
       <h5 class="card-header">Mapa:</h5>
       <div class="card-body">
+        
+        <!-- AQUI HACER BUSQUEDA POR API Y LECTURA DE JSON -->
         <?php 
           $lat = -33.5;
           $long = -70.5;
@@ -48,6 +50,7 @@ include('../templates/header.html');   ?>
               "long" => -70.6],
           ];
         ?>
+        
         <div id="mapid" style="height:400px">
         </div>
       </div>
