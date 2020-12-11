@@ -86,20 +86,23 @@
     </span>
   </div>
   
-  <div class="card pl-3 pr-3 pt-4 pb-3"s>
-    <span class="border border-primary">
-      <h5 class="card-header">Buscar mensaje por texto</h5>
-      <div class="card-body">
-        <form action="../consultas/consulta_mensaje_buscar.php" method="post">
-          <div class="form-group">
-            <label>Ingrese texto:</label>
-            <input type="text" class="form-control" name="texto">
-          </div>
-          <button type="input" class="btn btn-primary">Buscar</button>
-        </form>
-      </div>
-    </span>
-  </div>
+  <?php $id_usuario = $_GET['ID']; ?>
+        <h1>Aquí hacemos Requests a la API</h1>
+        <h3>Ingrese los campos que desea</h3>
+        <div class="api-requester">
+            <form align="center" action="../consultas/consulta_mensaje_buscar.php" method="get">
+                <input type="hidden" name="ID" value="<?php echo $id_usuario ?>">
+                <label for="desired">Busqueda Simple:</label><br>
+                <input id="desired"> type="text" name="desired">
+                <label for="required">Busqueda Exacta:</label><br>
+                <input id="required" type="text" name="required">
+                <label for="forbidden">No buscar:</label><br>
+                <input id="forbidden" type="text" name="forbidden">
+            <input type="submit" value="Buscar">
+            </form>
+        </div>
+    </body>
+
 
 
 <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
