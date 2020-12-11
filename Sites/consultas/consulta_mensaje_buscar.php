@@ -47,7 +47,7 @@
             <?php foreach ($response as $message){
                     # Aquí se añade un ejemplo en el que se obtiene el usuario que recibe el mensaje
                     $ch = curl_init();
-                    $url = 'https://miApi.herokuapp.com/users/' . $message['receptant'];
+                    $url = 'https://intense-cliffs-44204.herokuapp.com/users/' . $message['receptant'];
                     curl_setopt($ch, CURLOPT_URL, $url);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     $res = curl_exec($ch);
